@@ -1,4 +1,4 @@
-Project NASA-api by Victor , Brian 
+Project NASA-api by Victor AF , Brian 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
