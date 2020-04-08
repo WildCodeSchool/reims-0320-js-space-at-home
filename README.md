@@ -1,7 +1,5 @@
-Project NASA-api by Victor Auxietre-Fontes, Victor Veyrier, Martin Gilbert
-
+Project NASA-api by Victor Auxietre-Fontes, Victor Veyrier, Martin Gilbert, Brian Lagaude
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 ## Available Scripts
 
 In the project directory, you can run:
