@@ -1,4 +1,4 @@
-made with foot by Martin
+made with <3 by Martin
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
