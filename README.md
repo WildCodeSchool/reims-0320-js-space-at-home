@@ -1,4 +1,4 @@
-Project NASA-api by Victor 
+Project NASA-api by Victor Auxietre-Fontes, Victor Veyrier
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
