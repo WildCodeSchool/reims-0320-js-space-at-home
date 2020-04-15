@@ -28,8 +28,7 @@ class PictureDay extends React.Component {
     }
 
     render() {
-      const { url } = this.state;
-      const { concept } = this.state;
+      const { url, concept } = this.state;
       return (
         <div className="eventPage">
           <h1 className="eventTitle">Picture of The Day :</h1>
