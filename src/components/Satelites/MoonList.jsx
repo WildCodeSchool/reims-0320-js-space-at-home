@@ -1,6 +1,6 @@
 import React from 'react';
 
-class MoonsList extends React.Component {
+class MoonList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -23,4 +23,4 @@ class MoonsList extends React.Component {
   }
 }
 
-export default MoonsList;
+export default MoonList;
