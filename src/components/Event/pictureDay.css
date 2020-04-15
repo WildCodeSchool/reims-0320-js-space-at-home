@@ -1,0 +1,13 @@
+.eventBlock{
+    display: flex;
+    background-color: black;
+}
+
+.imageEvent{
+    height: 60vh;
+}
+
+.textEvent {
+    color: white;
+    font-size: 1rem;
+}

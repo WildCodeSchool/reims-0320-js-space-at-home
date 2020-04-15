@@ -1,12 +1,13 @@
-import React from 'react'
-import Axios from 'axios'
+import React from 'react';
+import Axios from 'axios';
+import './pictureDay.css';
 
 class PictureDay extends React.Component {
   constructor() {
     super();
     this.state = {
-      url: "https://via.placeholder.com/550",
-      concept: "Reste à l'écran"
+      url: 'https://via.placeholder.com/550',
+      concept: "Reste à l'écran",
     };
     this.getPicture = this.getPicture.bind(this);
   }
@@ -16,7 +17,7 @@ class PictureDay extends React.Component {
   }
 
     getPicture = () => {
-      Axios.get("https://api.nasa.gov/planetary/apod?api_key=tJEyrCHFpmMVohJmDqxBnDac7xXMWQeEUeYNIcKc")
+      Axios.get('https://api.nasa.gov/planetary/apod?api_key=tJEyrCHFpmMVohJmDqxBnDac7xXMWQeEUeYNIcKc')
         .then((response) => response.data)
         .then((data) => {
           this.setState({
@@ -30,10 +31,10 @@ class PictureDay extends React.Component {
       const { url } = this.state;
       const { concept } = this.state;
       return (
-        <>
-          <img src={url} alt="" />
-          <p>{concept}</p>
-        </>
+        <div className="eventBlock">
+          <img className="imageEvent" src={url} alt="" />
+          <p className="textEvent">{concept}</p>
+        </div>
       );
     }
 }

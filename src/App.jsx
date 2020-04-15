@@ -1,5 +1,5 @@
 import React from 'react';
-import PictureDay from './components/Event/PictureDay'
+import PictureDay from './components/Event/PictureDay';
 
 
 function App() {
