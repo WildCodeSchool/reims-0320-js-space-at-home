@@ -13,7 +13,7 @@ class PictureDay extends React.Component{
 
     componentDidMount() {
         this.getPicture();
-      } 
+    } 
 
     getPicture = () => {
         Axios.get("https://api.nasa.gov/planetary/apod?api_key=tJEyrCHFpmMVohJmDqxBnDac7xXMWQeEUeYNIcKc")
@@ -29,8 +29,8 @@ class PictureDay extends React.Component{
     render(){
         return(
             <>
-            <img src={this.state.url} alt=""/>
-            <p>{this.state.concept}</p>
+                <img src={this.state.url} alt=""/>
+                <p>{this.state.concept}</p>
             </>
         )
     }
