@@ -1,13 +1,35 @@
+.eventTitle{
+    color: white;
+}
+
+.eventPage{
+    background-color: black;
+}
+
 .eventBlock{
     display: flex;
     background-color: black;
 }
 
-.imageEvent{
+.eventImage{
     height: 60vh;
 }
 
-.textEvent {
+.eventText {
     color: white;
     font-size: 1rem;
+    padding: 1rem;
+    text-align: justify;
+}
+
+@media screen and (max-width: 750px ){
+    
+    .eventBlock{
+        display: block;
+    }
+
+    .eventImage{
+        height: auto;
+        width: 100vw;
+    }
 }
