@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(2, 61, 109, 0.856);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+li {
+  list-style-type: none;
+  color: white;
+  display: inline-block;
+  padding: 0rem 1.5rem;
+}
+
+.title {
+  font-family: Audiowide;
+}
+
+a {
+  color: white;
+  display: inline-block;
+  font-family: Orbitron;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+.sections {
+  transition: all 0.5s ease 0.2s;
+}
+
+.sections:hover {
+  color: rgb(128, 128, 128);
+  text-decoration: underline;
+}
+
+
