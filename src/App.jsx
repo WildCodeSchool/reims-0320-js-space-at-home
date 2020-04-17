@@ -1,6 +1,8 @@
 import React from 'react';
 import PictureDay from './components/Event/PictureDay';
+import Categories from './components/Categories/Categories';
 import SolarSystem from './components/Event/SolarSystem';
+
 
 function App() {
   return (
@@ -8,6 +10,7 @@ function App() {
       <div className="pageBlock">
         <SolarSystem />
         <PictureDay />
+        <Categories />
       </div>
     </>
   );
