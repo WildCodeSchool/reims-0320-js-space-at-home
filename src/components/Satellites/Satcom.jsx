@@ -3,8 +3,8 @@ import React from 'react';
 function Satcom() {
   return (
     <div className="satellitesPage">
-      <div>
-        <image className="satellitesImage" src="https://space.skyrocket.de/img_sat/satcom-c5__1.jpg" alt="satcom" />
+      <div className="satellitesImage satcom">
+        <image src="https://space.skyrocket.de/img_sat/satcom-c5__1.jpg" alt="satcom" />
       </div>
       <div>
         <h1>Satcom</h1>

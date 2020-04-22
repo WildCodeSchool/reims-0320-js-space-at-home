@@ -3,8 +3,8 @@ import React from 'react';
 function Sputnik1() {
   return (
     <div className="satellitesPage">
-      <div>
-        <image className="satellitesImage" src="https://airandspace.si.edu/sites/default/files/2006-25353h_0.jpg" alt="Sputnik" />
+      <div className="satellitesImage sputnik">
+        <image src="https://airandspace.si.edu/sites/default/files/2006-25353h_0.jpg" alt="Sputnik" />
       </div>
       <div>
         <h1>Sputnik 1</h1>
