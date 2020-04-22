@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron&display=swap");
+
+.navbar_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: rgba(2, 61, 109, 0.856);
+}
+
+.navbar_sections {
+  list-style-type: none;
+  color: white;
+  display: inline-block;
+  padding: 0rem 2.5rem;
+}
+
+.navbar_title {
+  color: white;
+  font-size: large;
+  font-family: Audiowide;
+}
+
+.navbar_sections {
+  color: white;
+  display: inline-block;
+  font-family: Orbitron;
+}
+
+.navbar_sections :link {
+  text-decoration: none;
+}
+
+.navbar_sections :visited {
+  text-decoration: none;
+}
+
+.navbar_sections :hover {
+  color: rgb(128, 128, 128);
+  text-decoration: underline;
+  transition: all 0.2s ease 0.1s;
+}
+
+
