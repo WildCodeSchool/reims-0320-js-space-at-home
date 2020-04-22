@@ -4,10 +4,10 @@ import {
   Link, BrowserRouter, Switch, Route,
 } from 'react-router-dom';
 import Planets from '../Planets/Planets';
-import Satellites from '../Satelites/Satellites';
+import Satellites from '../Satellites/Satellites';
 import SolarSystem from '../SolarSystem/SolarSystem';
 import Event from '../Event/PictureDay';
-import Moons from '../Satelites/Moons';
+import Moons from '../Moons/Moons';
 
 const Navbar = () => (
   <BrowserRouter>

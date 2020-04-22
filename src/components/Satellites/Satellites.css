@@ -1,0 +1,21 @@
+.satellitesSection{
+    height: 20vh;
+    background-color: black;
+    color: white;
+}
+
+.satellitesPage{
+    display: flex;
+    background-color: black;
+    color: white;
+}
+
+.satellitesIframe{
+    height:70vh;
+    border: 0 ;
+    margin-right: 1rem;
+}
+
+.satellitesImage{
+    width: 50vw;
+}
