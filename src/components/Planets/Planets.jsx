@@ -34,7 +34,7 @@ const PlanetsTable = [
   },
   {
     name: 'Saturne',
-    iframe: <iframe title="Saturne3D" src="https://solarsystem.nasa.gov/gltf_embed/2355" width="150%" height="450px" frameBorder="0" />,
+    iframe: <iframe className="iframe" title="Saturne3D" src="https://solarsystem.nasa.gov/gltf_embed/2355" width="150%" height="450px" frameBorder="0" />,
     type: 'Gas Giant',
   },
   {
@@ -48,24 +48,24 @@ const PlanetsTable = [
 class Planets extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {planetIndex: 1};
   }
 
 
   render() {
     return (
       <>
-        {PlanetsTable.map((element) => (
+        <button type="button">Earth</button>
           <div className="OpenCard">
             <br />
             <div className="block">
               <div className="Circle">
-                {element.iframe}
+                {PlanetsTable[this.state.planetIndex].iframe}
               </div>
               <div className="CategoriesTitle">
-                <h2>{element.name}</h2>
+                <h2>{PlanetsTable[0].name}</h2>
                 <p>
-                  {element.type}
+                  {PlanetsTable[0].type}
                 </p>
                 <p>
                   Vivamus id ex ut ante faucibus sodales quis at tellus.Proin lectus dolor, convallis non rutrum in, mollis nec magna.
@@ -75,7 +75,6 @@ class Planets extends React.Component {
               </div>
             </div>
           </div>
-        ))}
       </>
     );
   }
