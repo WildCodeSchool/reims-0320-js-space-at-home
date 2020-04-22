@@ -12,8 +12,9 @@ import Moons from '../Satelites/Moons';
 const Navbar = () => (
   <BrowserRouter>
     <header>
-      <nav className="navbar_container">
-        <ul>
+      <nav>
+        <ul className="navbar_container">
+          <img className="navbar_logo" src="" alt="logo" />
           <li className="navbar_title"><Link to="/">Space at Home</Link></li>
           <li className="navbar_sections"><Link to="/Planets">Planets</Link></li>
           <li className="navbar_sections"><Link to="/Satellites">Satellites</Link></li>
@@ -21,7 +22,6 @@ const Navbar = () => (
           <li className="navbar_sections"><Link to="/SolarSystem">Solar System</Link></li>
         </ul>
       </nav>
-      <img className="navbar_logo" src="" alt="logo" />
     </header>
     <Switch>
       <Route exact path="/" component={Event} />
