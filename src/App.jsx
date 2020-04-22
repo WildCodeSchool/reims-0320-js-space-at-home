@@ -2,8 +2,8 @@ import React from 'react';
 import Navbar from './components/NavBar/Navbar';
 import PictureDay from './components/Event/PictureDay';
 import Categories from './components/Categories/Categories';
-import SolarSystem from './components/SolarSystem/SolarSystem';
-import SatellitesList from './components/Satellites/SatellitesList';
+// import SolarSystem from './components/SolarSystem/SolarSystem';
+import Satellites from './components/Satellites/Satellites';
 
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
         <Navbar />
         <PictureDay />
         <Categories />
-        <SatellitesList />
+        <Satellites />
       </div>
     </>
   );
