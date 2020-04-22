@@ -18,7 +18,7 @@ class Satellites extends React.Component {
   render() {
     return (
       <Router>
-        <div className="satellitesPage">
+        <div className="satellitesSection">
           <h1>VOIS MOI</h1>
           <ul>
             <li>
