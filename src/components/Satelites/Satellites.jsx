@@ -8,7 +8,9 @@ class Satellites extends React.Component {
 
   render() {
     return (
-      <div />
+      <div>
+        <h1>HELLO</h1>
+      </div>
     );
   }
 }
