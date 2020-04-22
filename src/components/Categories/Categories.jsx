@@ -15,7 +15,7 @@ class Categories extends React.Component {
         <br />
         <div className="block">
           <div className="Circle">
-            <img alt="Earth" className="Earth" src="https://www.groupeadequat.com/wp-content/uploads/2017/03/earth-blue-planet-globe-planet-87651.jpeg" />
+            <iframe title="Earth3D" src="https://solarsystem.nasa.gov/gltf_embed/2392" width="200%" height="500px" frameBorder="0" />
           </div>
           <div className="CategoriesTitle">
             <h2>Earth</h2>
