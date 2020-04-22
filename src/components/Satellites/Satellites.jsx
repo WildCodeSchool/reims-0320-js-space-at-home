@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from "prop-types";
 
 class Satellites extends React.Component {
   constructor(props) {
@@ -7,10 +8,9 @@ class Satellites extends React.Component {
   }
 
   render() {
-    return (
+    return(
       <div />
-    );
+    )
   }
-}
 
 export default Satellites;
