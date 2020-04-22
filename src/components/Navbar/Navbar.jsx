@@ -7,47 +7,30 @@ import Planets from '../Planets/Planets';
 import Satellites from '../Satelites/Satellites';
 import SolarSystem from '../SolarSystem/SolarSystem';
 import Event from '../Event/PictureDay';
-// import Moons from '../Moons/Moons';
+import Moons from '../Satelites/Moons';
 
 const Navbar = () => (
   <BrowserRouter>
-    <header className="navbar_container">
-      <ul>
-        <li className="navbar_title">
-          <Link to="/">Space at Home</Link>
-        </li>
-        <img className="navbar_logo" src="" alt="logo" />
-      </ul>
-      <nav>
+    <header>
+      <nav className="navbar_container">
         <ul>
-          <li className="navbar_sections" href="#">
-            <Link to="/Planets">Planets</Link>
-          </li>
-          <li className="navbar_sections" href="#">
-            <Link to="/Satellites">Satellites</Link>
-          </li>
-          <li className="navbar_sections" href="#">
-            <Link to="Moons">Moons</Link>
-          </li>
-          <li className="navbar_sections" href="#">
-            <Link to="/Solar System">Solar System 2D</Link>
-          </li>
-          <li className="navbar_sections" href="#">
-            <Link to="/Event">Event</Link>
-          </li>
+          <li className="navbar_title"><Link to="/">Space at Home</Link></li>
+          <li className="navbar_sections"><Link to="/Planets">Planets</Link></li>
+          <li className="navbar_sections"><Link to="/Satellites">Satellites</Link></li>
+          <li className="navbar_sections"><Link to="/Moons">Moons</Link></li>
+          <li className="navbar_sections"><Link to="/SolarSystem">Solar System</Link></li>
         </ul>
       </nav>
-      <Switch>
-        <Route exact path="/" />
-        <Route path="/PlanetsJsx" component={Planets.jsx} />
-        <Route path="/SatelittesJsx" component={Satellites.jsx} />
-        <Route path="/SolarSystemJsx" component={SolarSystem.jsx} />
-        {/* <Route path="/MoonsJsx" component={Moons.jsx} /> */}
-        <Route path="/EventJsx" component={Event.jsx} />
-      </Switch>
+      <img className="navbar_logo" src="" alt="logo" />
     </header>
+    <Switch>
+      <Route exact path="/" component={Event} />
+      <Route path="/Planets" component={Planets} />
+      <Route path="/Satellites" component={Satellites} />
+      <Route path="/SolarSystem" component={SolarSystem} />
+      <Route path="/Moons" component={Moons} />
+    </Switch>
   </BrowserRouter>
 );
-
 
 export default Navbar;
