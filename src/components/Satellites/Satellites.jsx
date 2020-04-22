@@ -19,7 +19,6 @@ class Satellites extends React.Component {
     return (
       <Router>
         <div className="satellitesSection">
-          <h1>VOIS MOI</h1>
           <ul>
             <li>
               <Link to="/Hubble">Hubble</Link>
