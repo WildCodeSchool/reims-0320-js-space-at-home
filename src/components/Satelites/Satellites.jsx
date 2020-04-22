@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Planets extends React.Component {
+class Satellites extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -9,10 +9,10 @@ class Planets extends React.Component {
   render() {
     return (
       <div>
-        <h1>Hello World</h1>
+        <h1>HELLO</h1>
       </div>
     );
   }
 }
 
-export default Planets;
+export default Satellites;
