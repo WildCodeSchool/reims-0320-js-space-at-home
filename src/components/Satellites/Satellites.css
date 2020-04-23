@@ -12,6 +12,7 @@
 
 .satellitesNavbar{
     display: flex;
+    justify-content: space-around;
 }
 
 .satellitesNavbar li{
