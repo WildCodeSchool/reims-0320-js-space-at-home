@@ -49,8 +49,15 @@
 
 .satcom{
     background-image: url('https://space.skyrocket.de/img_sat/satcom-c5__1.jpg');
+    background-repeat: no-repeat;
 }
 
 .sputnik{
     background-image: url('https://airandspace.si.edu/sites/default/files/2006-25353h_0.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.satellitesText{
+    width: 50vw;
 }
