@@ -34,7 +34,7 @@ class PictureDay extends React.Component {
           <h1 className="eventTitle">Picture of The Day :</h1>
           <div className="eventBlock">
             {url.includes('youtube')
-              ? <iframe src={url} title="youtubeVideo" />
+              ? <iframe src={url} title="youtubeVideo" allowFullScreen="true" />
               : <img className="eventImage" src={url} alt="pictureDay" />}
             <p className="eventText">{concept}</p>
           </div>
