@@ -64,12 +64,14 @@ class Planets extends React.Component {
     const { planetIndex } = this.state;
     return (
       <>
-        <button type="button" onClick={this.nextPlanet}>
-          Inner Planet
-        </button>
-        <button type="button" onClick={this.previousPlanet}>
-          Outer Planet
-        </button>
+        <div className="buttonDiv">
+          <button className="buttonPlanet" type="button" onClick={this.previousPlanet}>
+            Inner Planet
+          </button>
+          <button className="buttonPlanet" type="button" onClick={this.nextPlanet}>
+            Outer Planet
+          </button>
+        </div>
         <div className="OpenCard">
           <br />
           <div className="block">
