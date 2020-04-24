@@ -1,27 +1,18 @@
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-    display: block; }
-  
-  body {
-    line-height: 1; }
-  
-  ol, ul {
-    list-style: none; }
-  
-  blockquote, q {
-    quotes: none; }
-  
-  blockquote:before, blockquote:after, q:before, q:after {
-    content: none; }
-  
-  table {
-    border-collapse: collapse;
-    border-spacing: 0; }
-  
   * {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     box-sizing: border-box; }
   
+  .SolarSystemP{
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .SolarSystemH1{
+    font-size: 2rem;
+  }
+
   body {
     font-size: 13px;
     font-family: 'Open Sans', sans-serif;
@@ -113,7 +104,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     box-sizing: border-box;
     box-sizing: border-box; }
   
-  /* --------------------------------------------------------------------------- planets index */
+  /* --------------------------------------------------------------------------- planets index 
   #mercury {
     z-index: 10; }
   
@@ -143,6 +134,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   
   #sun {
     z-index: 1; }
+  */
   
   /* --------------------------------------------------------------------------- animations */
   @keyframes orbit {
