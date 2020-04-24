@@ -6,19 +6,19 @@ const moonsList = [
     name: 'Earth\'s Moon',
     iframe: <iframe title="Moon 3D" src="https://solarsystem.nasa.gov/gltf_embed/2366" width="100%" height="450px" frameBorder="0" />,
     planet: 'Earth',
-    text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa ducimus ratione tempora dolorum tempore. Laudantium nesciunt minima inventore sunt porro optio illo',
+    text: 'Our moon makes Earth a more livable planet. The moon was likely formed after a Mars-sized body collided with Earth and the debris formed into the most prominent feature in our night sky. During the Apollo program of the 1960s and \'70s, NASA sent nine missions to the Moon. Six of them landed astronauts safely on the surface, the only times humans have visited another world.',
   },
   {
     name: 'Deimos',
     iframe: <iframe title="Deimos3D" src="https://solarsystem.nasa.gov/gltf_embed/2434" width="100%" height="450px" frameBorder="0" />,
     planet: 'Mars',
-    text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa ducimus ratione tempora dolorum tempore. Laudantium nesciunt minima inventore sunt porro optio illo',
+    text: 'Deimos is the smaller of Mars\'s two moons. It is a dark body that appears to be composed of C-type surface materials, similar to that of asteroids found in the outer asteroid belt. Deimos was discovered on Aug. 11, 1877 by Asaph Hall who named Mars\'s moons for the mythological sons of Ares, the Greek counterpart of the Roman god, Mars. Deimos, whose name means dread, is the brother of Phobos.',
   },
   {
-    name: 'Phebos',
+    name: 'Phobos',
     iframe: <iframe title="Phebos 3D" src="https://solarsystem.nasa.gov/gltf_embed/2358" width="100%" height="450px" frameBorder="0" />,
     planet: 'Mars',
-    text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa ducimus ratione tempora dolorum tempore. Laudantium nesciunt minima inventore sunt porro optio illo',
+    text: 'Phobos is the larger of Mars\'s two moons and was discovered on Aug. 17, 1877 by Asaph Hall who named Mars\'s moons for the mythological sons of Ares, the Greek counterpart of the Roman god, Mars. Phobos, whose name means fear or panic, is the brother of Deimos.',
   },
   {
     name: 'Europa',
@@ -67,18 +67,21 @@ const moonsList = [
 class Moons extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { moonsIndex: 3 };
+    this.state = { moonsIndex: 2 };
   }
 
   nextMoon = () => {
-    this.setState({ moonsIndex: this.state.moonsIndex + 1 });
+    const { moonsIndex } = this.state;
+    this.setState({ moonsIndex: moonsIndex + 1 });
   }
 
   previousMoon = () => {
-    this.setState({ moonsIndex: this.state.moonsIndex - 1 });
+    const { moonsIndex } = this.state;
+    this.setState({ moonsIndex: moonsIndex - 1 });
   }
 
   render() {
+    const { moonsIndex } = this.state;
     return (
       <>
         <button type="button" onClick={this.nextMoon}>
@@ -90,12 +93,12 @@ class Moons extends React.Component {
         <div className="OpenCard">
           <div className="block">
             <div className="Circle">
-              {moonsList[this.state.moonsIndex].iframe}
+              {moonsList[moonsIndex].iframe}
             </div>
             <div className="CategoriesTitle">
-              <h2>{moonsList[this.state.moonsIndex].name}</h2>
+              <h2>{moonsList[moonsIndex].name}</h2>
               <p>
-                {moonsList[this.state.moonsIndex].text}
+                {moonsList[moonsIndex].text}
               </p>
             </div>
           </div>
