@@ -104,38 +104,6 @@
     box-sizing: border-box;
     box-sizing: border-box; }
   
-  /* --------------------------------------------------------------------------- planets index 
-  #mercury {
-    z-index: 10; }
-  
-  #venus {
-    z-index: 9; }
-  
-  #earth {
-    z-index: 8; }
-  
-  #moon {
-    z-index: 7; }
-  
-  #mars {
-    z-index: 6; }
-  
-  #jupiter {
-    z-index: 5; }
-  
-  #saturn {
-    z-index: 4; }
-  
-  #uranus {
-    z-index: 3; }
-  
-  #neptune {
-    z-index: 2; }
-  
-  #sun {
-    z-index: 1; }
-  */
-  
   /* --------------------------------------------------------------------------- animations */
   @keyframes orbit {
     0% {
