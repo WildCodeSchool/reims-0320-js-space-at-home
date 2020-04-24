@@ -48,33 +48,48 @@ const PlanetsTable = [
 class Planets extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {planetIndex: 1};
+    this.state = { planetIndex: 3 };
   }
 
+  nextPlanet = () => {
+    this.setState({ planetIndex: this.state.planetIndex +1 });
+  }
+
+  previousPlanet = () => {
+    this.setState({ planetIndex: this.state.planetIndex -1 });
+  }
 
   render() {
     return (
       <>
-        <button type="button">Earth</button>
-          <div className="OpenCard">
-            <br />
-            <div className="block">
-              <div className="Circle">
-                {PlanetsTable[this.state.planetIndex].iframe}
-              </div>
-              <div className="CategoriesTitle">
-                <h2>{PlanetsTable[0].name}</h2>
-                <p>
-                  {PlanetsTable[0].type}
-                </p>
-                <p>
-                  Vivamus id ex ut ante faucibus sodales quis at tellus.Proin lectus dolor, convallis non rutrum in, mollis nec magna.
-                  Vestibulum pulvinar, urna et consectetur malesuada, est eros rutrum justo, eu aliquet enim tellus id quam.
-                  Integer accumsan ex metus, finibus euismod eros imperdiet quis.Phasellus rhoncus turpis vehicula magna volutpat aliquam.
-                </p>
-              </div>
+        <button type="button" onClick={this.nextPlanet}>
+          Inner Planet
+        </button>
+        <button type="button" onClick={this.previousPlanet}>
+          Outer Planet
+        </button>
+        <div className="OpenCard">
+          <br />
+          <div className="block">
+            <div className="Circle">
+              {PlanetsTable[this.state.planetIndex].iframe}
+            </div>
+            <div className="CategoriesTitle">
+              <h2>{PlanetsTable[this.state.planetIndex].name}</h2>
+              <p>
+                {PlanetsTable[this.state.planetIndex].type}
+              </p>
+              <p>
+                Vivamus id ex ut ante faucibus sodales quis at tellus.Proin lectus dolor,
+                convallis non rutrum in, mollis nec magna.
+                Vestibulum pulvinar, urna et consectetur malesuada,
+                est eros rutrum justo, eu aliquet enim tellus id quam.
+                Integer accumsan ex metus, finibus euismod eros imperdiet quis.
+                Phasellus rhoncus turpis vehicula magna volutpat aliquam.
+              </p>
             </div>
           </div>
+        </div>
       </>
     );
   }
