@@ -20,7 +20,6 @@ class PictureDay extends React.Component {
       Axios.get('https://api.nasa.gov/planetary/apod?api_key=tJEyrCHFpmMVohJmDqxBnDac7xXMWQeEUeYNIcKc')
         .then((response) => response.data)
         .then((data) => {
-          console.log(data)
           this.setState({
             url: data.url,
             concept: data.explanation,
@@ -36,7 +35,7 @@ class PictureDay extends React.Component {
           <div className="eventBlock">
             {url.includes('youtube')
               ? <iframe src={url} title="youtubeVideo" />
-              : <img className="eventImage" src={url} alt="" />}
+              : <img className="eventImage" src={url} alt="pictureDay" />}
             <p className="eventText">{concept}</p>
           </div>
         </div>
