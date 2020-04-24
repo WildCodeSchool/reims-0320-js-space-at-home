@@ -32,3 +32,15 @@ max-height: 30rem;
   background-color: black;
   border-radius: 15px;
 }
+.buttonDiv{
+  display: flex;
+  justify-content: space-around;
+  
+}
+
+.buttonPlanet{
+  border-radius: 3px;
+  background-color: rgb(46, 41, 41);
+  color: rgb(185, 188, 194);
+  border-color: black;
+}
