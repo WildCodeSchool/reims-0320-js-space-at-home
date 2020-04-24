@@ -44,7 +44,6 @@ const PlanetsTable = [
   },
 ];
 
-
 class Planets extends React.Component {
   constructor(props) {
     super(props);
@@ -52,14 +51,17 @@ class Planets extends React.Component {
   }
 
   nextPlanet = () => {
-    this.setState({ planetIndex: this.state.planetIndex +1 });
+    const { planetIndex } = this.state;
+    this.setState({ planetIndex: planetIndex + 1 });
   }
 
   previousPlanet = () => {
-    this.setState({ planetIndex: this.state.planetIndex -1 });
+    const { planetIndex } = this.state;
+    this.setState({ planetIndex: planetIndex - 1 });
   }
 
   render() {
+    const { planetIndex } = this.state;
     return (
       <>
         <button type="button" onClick={this.nextPlanet}>
@@ -72,12 +74,12 @@ class Planets extends React.Component {
           <br />
           <div className="block">
             <div className="Circle">
-              {PlanetsTable[this.state.planetIndex].iframe}
+              {PlanetsTable[planetIndex].iframe}
             </div>
             <div className="CategoriesTitle">
-              <h2>{PlanetsTable[this.state.planetIndex].name}</h2>
+              <h2>{PlanetsTable[planetIndex].name}</h2>
               <p>
-                {PlanetsTable[this.state.planetIndex].type}
+                {PlanetsTable[planetIndex].type}
               </p>
               <p>
                 Vivamus id ex ut ante faucibus sodales quis at tellus.Proin lectus dolor,
