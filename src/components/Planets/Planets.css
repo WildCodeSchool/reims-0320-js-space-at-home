@@ -27,3 +27,8 @@ max-height: 30rem;
   max-width: 25rem;
   font-size: large;
 }
+
+.iframe{
+  background-color: black;
+  border-radius: 15px;
+}
