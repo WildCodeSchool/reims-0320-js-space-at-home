@@ -8,7 +8,9 @@ class PictureDay extends React.Component {
     this.state = {
       url: 'https://via.placeholder.com/550',
       concept: 'Explication photo du jour',
-      date: new Date(),
+      dateYear: new Date().getFullYear(),
+      dateMonth: new Date().getMonth() + 1,
+      dateDay: new Date().getDate(),
     };
     this.getPicture = this.getPicture.bind(this);
   }
@@ -18,7 +20,9 @@ class PictureDay extends React.Component {
   }
 
     getPicture = () => {
-      Axios.get('https://api.nasa.gov/planetary/apod?api_key=tJEyrCHFpmMVohJmDqxBnDac7xXMWQeEUeYNIcKc')
+      const { dateYear, dateMonth, dateDay } = this.state;
+      const url = `https://api.nasa.gov/planetary/apod?date=${dateYear}-${dateMonth}-${dateDay}&api_key=tJEyrCHFpmMVohJmDqxBnDac7xXMWQeEUeYNIcKc`;
+      Axios.get(url)
         .then((response) => response.data)
         .then((data) => {
           this.setState({
