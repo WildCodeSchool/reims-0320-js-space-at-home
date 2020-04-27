@@ -1,11 +1,11 @@
 import React from 'react';
-import Navbar from './components/Navbar/Navbar';
+import PictureDay from './components/Event/PictureDay';
 
 function App() {
   return (
     <>
       <div className="pageBlock">
-        <Navbar />
+        <PictureDay />
       </div>
     </>
   );
