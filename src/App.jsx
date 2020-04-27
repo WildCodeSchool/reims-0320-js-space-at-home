@@ -1,6 +1,6 @@
 import React from 'react';
 import PictureDay from './components/Event/PictureDay';
-import './App.css'
+import './App.css';
 
 function App() {
   return (
