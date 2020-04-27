@@ -1,5 +1,6 @@
 import React from 'react';
 import BackToTop from 'react-back-to-top-button';
+import './ButtonTop.css';
 
 function App() {
   return (
@@ -9,7 +10,7 @@ function App() {
       speed={1500}
       easing="easeInOutQuint"
     >
-      <span>&#10514;</span>
+      <span className="buttonStyle">&#10514;</span>
     </BackToTop>
   );
 }
