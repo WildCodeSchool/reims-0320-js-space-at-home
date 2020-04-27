@@ -7,7 +7,8 @@ class PictureDay extends React.Component {
     super();
     this.state = {
       url: 'https://via.placeholder.com/550',
-      concept: "Reste à l'écran",
+      concept: 'Explication photo du jour',
+      date: new Date(),
     };
     this.getPicture = this.getPicture.bind(this);
   }

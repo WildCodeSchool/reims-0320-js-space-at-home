@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron&display=swap");
+
 .eventTitle{
     color: white;
 }
@@ -20,6 +23,7 @@
     font-size: 1rem;
     padding: 1rem;
     text-align: justify;
+    /*font-family: Orbitron;*/
 }
 
 @media screen and (max-width: 750px ){
