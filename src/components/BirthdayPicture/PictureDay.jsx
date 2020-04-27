@@ -1,7 +1,6 @@
 import React from 'react';
 import Axios from 'axios';
 import './pictureDay.css';
-import DateSelector from './DateSelector';
 
 class PictureDay extends React.Component {
   constructor() {
@@ -12,6 +11,7 @@ class PictureDay extends React.Component {
       dateYear: new Date().getFullYear(),
       dateMonth: new Date().getMonth() + 1,
       dateDay: new Date().getDate(),
+      dateComp: ""
     };
     this.getPicture = this.getPicture.bind(this);
   }
@@ -34,10 +34,32 @@ class PictureDay extends React.Component {
     }
 
     render() {
-      const { url, concept } = this.state;
+      const today = `${new Date().getFullYear()}-${new Date().getMonth() + 1}-${new Date().getDate()}`;
+      const {
+        url, concept, dateYear, dateMonth, dateDay, dateComp,
+      } = this.state;
+      const value = `${dateYear}-${dateMonth}-${dateDay}`;
       return (
         <>
-          <DateSelector />
+          <div>
+            <label htmlFor="date">
+              BirthdayPicture
+              <input
+                type="date"
+                id="date"
+                name="date"
+                value={dateComp}
+                min="1995-06-16"
+                max="2020-04-27"
+                onChange={(event) => {
+                  this.setState({ dateComp: event.target.value });
+                }}
+              />
+            </label>
+          </div>
+          <div>
+            <button type="button">Valider</button>
+          </div>
           <div className="eventPage">
             <h1 className="eventTitle">Picture of The Day :</h1>
             <div className="eventBlock">
