@@ -1,17 +1,20 @@
 import React from 'react';
 import Axios from 'axios';
 import './pictureDay.css';
+import dateFormat from 'dateformat';
 
+function today() {
+  return (
+    dateFormat(new Date(), 'yyyy-mm-dd')
+  );
+}
 class PictureDay extends React.Component {
   constructor() {
     super();
     this.state = {
       url: 'https://via.placeholder.com/550',
       concept: 'Explication photo du jour',
-      dateYear: new Date().getFullYear(),
-      dateMonth: new Date().getMonth() + 1,
-      dateDay: new Date().getDate(),
-      dateComp: ""
+      dateComp: today(),
     };
     this.getPicture = this.getPicture.bind(this);
   }
@@ -20,9 +23,16 @@ class PictureDay extends React.Component {
     this.getPicture();
   }
 
+  componentDidUpdate(prevProps, prevState) {
+    const { dateComp } = this.state;
+    if (prevState.dateComp !== dateComp) {
+      this.getPicture();
+    }
+  }
+
     getPicture = () => {
-      const { dateYear, dateMonth, dateDay } = this.state;
-      const url = `https://api.nasa.gov/planetary/apod?date=${dateYear}-${dateMonth}-${dateDay}&api_key=tJEyrCHFpmMVohJmDqxBnDac7xXMWQeEUeYNIcKc`;
+      const { dateComp } = this.state;
+      const url = `https://api.nasa.gov/planetary/apod?date=${dateComp}&api_key=tJEyrCHFpmMVohJmDqxBnDac7xXMWQeEUeYNIcKc`;
       Axios.get(url)
         .then((response) => response.data)
         .then((data) => {
@@ -34,11 +44,9 @@ class PictureDay extends React.Component {
     }
 
     render() {
-      const today = `${new Date().getFullYear()}-${new Date().getMonth() + 1}-${new Date().getDate()}`;
       const {
-        url, concept, dateYear, dateMonth, dateDay, dateComp,
+        url, concept, dateComp,
       } = this.state;
-      const value = `${dateYear}-${dateMonth}-${dateDay}`;
       return (
         <>
           <div>
@@ -50,15 +58,12 @@ class PictureDay extends React.Component {
                 name="date"
                 value={dateComp}
                 min="1995-06-16"
-                max="2020-04-27"
+                max={today()}
                 onChange={(event) => {
                   this.setState({ dateComp: event.target.value });
                 }}
               />
             </label>
-          </div>
-          <div>
-            <button type="button">Valider</button>
           </div>
           <div className="eventPage">
             <h1 className="eventTitle">Picture of The Day :</h1>
