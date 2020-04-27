@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron&display=swap");
+
+.eventTitle{
+    color: white;
+}
+
+.eventPage{
+    background-color: black;
+}
+
+.eventBlock{
+    display: flex;
+    background-color: black;
+}
+
+.eventImage{
+    height: 60vh;
+}
+
+.eventText {
+    color: white;
+    font-size: 1rem;
+    padding: 1rem;
+    text-align: justify;
+    /*font-family: Orbitron;*/
+}
+
+@media screen and (max-width: 750px ){
+    
+    .eventBlock{
+        display: block;
+    }
+
+    .eventImage{
+        height: auto;
+        width: 100vw;
+    }
+}
