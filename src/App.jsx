@@ -9,8 +9,8 @@ function App() {
   return (
     <>
       <div className="pageBlock">
-        <PictureDay />
         <Instructions />
+        <PictureDay />
         <ButtonTop />
       </div>
     </>

@@ -1,5 +1,10 @@
-.instructionsText {
+.instructionsBlock {
     color: white;
     padding: 1rem;
     text-align: justify;
-}  
+}
+@media (max-width: 750px) {
+    .instructionsBlock {
+      display: none;
+    }
+  }
