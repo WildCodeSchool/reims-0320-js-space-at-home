@@ -14,10 +14,14 @@ function Footer() {
         <div className="createdFooter">
           <h3>Created by :</h3>
           <div className="nameFooter">
-            <p>Victor Auxietre-Fontes</p>
-            <p>Martin Gilbert</p>
-            <p>Victor Veyrier</p>
-            <p>Brian Lagaude</p>
+            <div id="name1">
+              <a href="https://www.linkedin.com/in/martin-gilbert-23452b1a3/"><p>Martin Gilbert</p></a>
+              <a href="https://www.linkedin.com/in/victor-veyrier-ab6948194/"><p>Victor Veyrier</p></a>
+            </div>
+            <div id="name2">
+              <a href="https://www.linkedin.com/in/brian-lagaude-4110b31a4/"><p>Brian Lagaude</p></a>
+              <a href="https://www.linkedin.com/in/victor-auxietre-fontes-6a8439184/"><p>Victor Auxietre-Fontes</p></a>
+            </div>
           </div>
         </div>
         <div className="explanationFooter">
