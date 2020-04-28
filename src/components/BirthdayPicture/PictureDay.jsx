@@ -43,6 +43,18 @@ class PictureDay extends React.Component {
       const {
         url, concept, dateComp,
       } = this.state;
+      const prevNext = (operator) => {
+        const date = new Date(dateComp);
+
+        if (operator === '+') {
+          date.setDate(date.getDate() + 1);
+        } else {
+          date.setDate(date.getDate() - 1);
+        }
+        if (date <= new Date()) {
+          this.setState({ dateComp: dateFormat(date, 'yyyy-mm-dd') });
+        }
+      };
       return (
         <div className="eventPage">
           <div className="eventPage">
@@ -60,6 +72,12 @@ class PictureDay extends React.Component {
                 }}
               />
             </label>
+            <button type="button" onClick={() => prevNext('-')}>
+              Previous Day
+            </button>
+            <button type="button" onClick={() => prevNext('+')}>
+              Next Day
+            </button>
           </div>
           <div>
             <h1 className="eventTitle">Picture at your birthday :</h1>
