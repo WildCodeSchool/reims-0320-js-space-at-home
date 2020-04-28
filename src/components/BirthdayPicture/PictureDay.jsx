@@ -60,6 +60,12 @@ class PictureDay extends React.Component {
                 }}
               />
             </label>
+            <button type="button" onClick={() => this.setState({ dateComp })}>
+              Previous Day
+            </button>
+            <button type="button" onClick={() => this.setState({ dateComp })}>
+              Next Day
+            </button>
           </div>
           <div>
             <h1 className="eventTitle">Picture at your birthday :</h1>
