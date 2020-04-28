@@ -11,6 +11,7 @@ class PictureDay extends React.Component {
       url: 'https://via.placeholder.com/550',
       concept: 'Explication photo du jour',
       dateComp: today(),
+      count: 0,
     };
     this.getPicture = this.getPicture.bind(this);
   }
@@ -41,8 +42,12 @@ class PictureDay extends React.Component {
 
     render() {
       const {
-        url, concept, dateComp,
+        url, concept, dateComp, count,
       } = this.state;
+      const prevNext = (operator) => (operator === '+'
+        ? this.setState({ count: count + 1 })
+        : this.setState({ count: count - 1 })
+      );
       return (
         <div className="eventPage">
           <div className="eventPage">
@@ -60,13 +65,16 @@ class PictureDay extends React.Component {
                 }}
               />
             </label>
-            <button type="button" onClick={() => this.setState({ dateComp })}>
+            <button type="button" onClick={() => prevNext('-')}>
               Previous Day
             </button>
-            <button type="button" onClick={() => this.setState({ dateComp })}>
+            <button type="button" onClick={() => prevNext('+')}>
               Next Day
             </button>
           </div>
+          <h1>
+            {count}
+          </h1>
           <div>
             <h1 className="eventTitle">Picture at your birthday :</h1>
             <div className="eventBlock">
