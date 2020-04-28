@@ -51,7 +51,7 @@ class PictureDay extends React.Component {
         } else {
           date.setDate(date.getDate() - 1);
         }
-        if ((date <= new Date()) && (date <= "1995-06-16")) {
+        if ((date <= new Date()) && (date >= new Date('1995-06-16'))) {
           this.setState({ dateComp: dateFormat(date, 'yyyy-mm-dd') });
         }
       };
