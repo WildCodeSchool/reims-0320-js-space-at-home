@@ -47,7 +47,7 @@ class PictureDay extends React.Component {
         <div className="eventPage">
           <div className="eventPage">
             <label htmlFor="date" className="eventLabelSelector">
-              Birthday :
+              Select your Birthday :
               <input
                 type="date"
                 id="date"
@@ -66,7 +66,7 @@ class PictureDay extends React.Component {
             <div className="eventBlock">
               {url.includes('youtube')
                 ? <iframe src={url} title="youtubeVideo" allowFullScreen="true" />
-                : <img className="eventImage" src={url} alt="pictureDay" />}
+                : <div><img className="eventImage" src={url} alt="pictureDay" /></div>}
               <p className="eventText">{concept}</p>
             </div>
           </div>
