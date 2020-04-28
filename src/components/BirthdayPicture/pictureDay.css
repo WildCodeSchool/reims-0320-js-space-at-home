@@ -61,8 +61,26 @@
 
 }
 
-@media screen and (min-height: 751px){
-    
+@media screen and (min-width: 751px){
+
+    .eventLabelSelector{
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .eventBlock{
+        display: flex;
+        height: 100vh;
+    }
+
+    .eventImage{
+        width: 50vw;
+    }
+
+    .eventText{
+        font-size: 1.5rem;
+    }
+
 }
 
 

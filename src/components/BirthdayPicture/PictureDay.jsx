@@ -28,7 +28,7 @@ class PictureDay extends React.Component {
 
     getPicture = () => {
       const { dateComp } = this.state;
-      const url = `https://api.nasa.gov/planetary/apod?date=${dateComp}&api_key=tJEyrCHFpmMVohJmDqxBnDac7xXMWQeEUeYNIcKc`;
+      const url = `https://api.nasa.gov/planetary/apod?date=${dateComp}&hd=true&api_key=tJEyrCHFpmMVohJmDqxBnDac7xXMWQeEUeYNIcKc`;
       Axios.get(url)
         .then((response) => response.data)
         .then((data) => {
