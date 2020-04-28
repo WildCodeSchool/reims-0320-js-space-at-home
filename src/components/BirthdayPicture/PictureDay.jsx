@@ -3,11 +3,7 @@ import Axios from 'axios';
 import './pictureDay.css';
 import dateFormat from 'dateformat';
 
-function today() {
-  return (
-    dateFormat(new Date(), 'yyyy-mm-dd')
-  );
-}
+const today = () => dateFormat(new Date(), 'yyyy-mm-dd');
 class PictureDay extends React.Component {
   constructor() {
     super();
@@ -32,7 +28,7 @@ class PictureDay extends React.Component {
 
     getPicture = () => {
       const { dateComp } = this.state;
-      const url = `https://api.nasa.gov/planetary/apod?date=${dateComp}&api_key=tJEyrCHFpmMVohJmDqxBnDac7xXMWQeEUeYNIcKc`;
+      const url = `https://api.nasa.gov/planetary/apod?date=${dateComp}&hd=true&api_key=tJEyrCHFpmMVohJmDqxBnDac7xXMWQeEUeYNIcKc`;
       Axios.get(url)
         .then((response) => response.data)
         .then((data) => {
@@ -48,10 +44,10 @@ class PictureDay extends React.Component {
         url, concept, dateComp,
       } = this.state;
       return (
-        <>
-          <div>
-            <label htmlFor="date">
-              BirthdayPicture
+        <div className="eventPage">
+          <div className="eventPage">
+            <label htmlFor="date" className="eventLabelSelector">
+              Select your Birthday :
               <input
                 type="date"
                 id="date"
@@ -65,16 +61,16 @@ class PictureDay extends React.Component {
               />
             </label>
           </div>
-          <div className="eventPage">
-            <h1 className="eventTitle">Picture of The Day :</h1>
+          <div>
+            <h1 className="eventTitle">Picture at your birthday :</h1>
             <div className="eventBlock">
               {url.includes('youtube')
                 ? <iframe src={url} title="youtubeVideo" allowFullScreen="true" />
-                : <img className="eventImage" src={url} alt="pictureDay" />}
+                : <div><img className="eventImage" src={url} alt="pictureDay" /></div>}
               <p className="eventText">{concept}</p>
             </div>
           </div>
-        </>
+        </div>
       );
     }
 }
