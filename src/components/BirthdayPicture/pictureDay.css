@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron&display=swap");
+
+.eventPage{
+    background-color:black;
+}
+
+.eventImage{
+    height: auto;
+    width: 100vw;
+}
+
+.eventTitle{
+    font-size: 1.5rem;
+    font-family: "cooper";
+}
+
+.eventBlock iframe{
+    width: 100vw;
+}
+
+.eventLabelSelector{
+    font-family: 'cooper';
+}
+
+
+.eventLabelSelector input{
+    margin-left: 1rem;
+    border-color: white;
+    border-radius: 4px;
+    color: white;
+    background-color: black;
+}
+
+.eventText{
+    text-align: left;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 0.5px;
+}
+
+@media screen and  (max-height: 750px){
+
+    .eventBlock{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .eventImage{
+        height: 100vh;
+        width: auto;
+    }
+
+    .eventBlock iframe{
+        height: 100vh;
+    }
+
+    .eventText{
+        font-size: 1.5rem;
+    }
+
+}
+
+@media screen and (min-width: 751px){
+
+    .eventLabelSelector{
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .eventBlock{
+        display: flex;
+        height: 100vh;
+    }
+
+    .eventImage{
+        width: 50vw;
+    }
+
+    .eventText{
+        font-size: 1.5rem;
+    }
+
+}
+
+
+/*
+.eventTitle{
+    color: white;
+}
+
+.eventBlock{
+    display: flex;
+}
+
+.eventImage{
+    height: 60vh;
+}
+
+.eventText {
+    color: white;
+    font-size: 1rem;
+    padding: 1rem;
+    text-align: justify;
+    background: none;
+    font-family: Orbitron;*/
+
+
+
