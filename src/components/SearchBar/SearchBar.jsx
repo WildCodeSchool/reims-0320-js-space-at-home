@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './SearchBar.css';
 
 class SearchBar extends React.Component {
   constructor(props) {
@@ -10,7 +10,7 @@ class SearchBar extends React.Component {
   render() {
     return (
       <div>
-        <input type="text" />
+        <input type="text" className="SearchInput" />
         <button type="submit" className="searchButton">
           <i className="buttonImage" />
         </button>
