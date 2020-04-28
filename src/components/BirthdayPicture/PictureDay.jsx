@@ -44,10 +44,18 @@ class PictureDay extends React.Component {
       const {
         url, concept, dateComp, count,
       } = this.state;
-      const prevNext = (operator) => (operator === '+'
-        ? this.setState({ count: count + 1 })
-        : this.setState({ count: count - 1 })
-      );
+      const prevNext = (operator) => {
+        const date = new Date(dateComp);
+
+        if (operator === '+') {
+          date.setDate(date.getDate() + 1);
+        } else {
+          date.setDate(date.getDate() - 1);
+        }
+        if (date <= new Date()) {
+          this.setState({ dateComp: dateFormat(date, 'yyyy-mm-dd') });
+        }
+      };
       return (
         <div className="eventPage">
           <div className="eventPage">
