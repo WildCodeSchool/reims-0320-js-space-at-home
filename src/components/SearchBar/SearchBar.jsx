@@ -1,22 +1,14 @@
-import React from 'react';
-import './SearchBar.css';
+import React, { useState } from 'react';
+import Button from './Button';
+import TextInput from './TextInput';
 
-class SearchBar extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
-  render() {
-    return (
-      <div>
-        <input type="text" className="SearchInput" />
-        <button type="submit" className="searchButton">
-          <i className="buttonImage" />
-        </button>
-      </div>
-    );
-  }
-}
+const SearchBar = ({
+   keywords, onSearch, setKeywords, style 
+}) => (
+  <div style={style}>
+    <TextInput setText={setKeywords} text={keywords} />
+    <Button onClick={onSearch}>Go !</Button>
+  </div>
+);
 
 export default SearchBar;
