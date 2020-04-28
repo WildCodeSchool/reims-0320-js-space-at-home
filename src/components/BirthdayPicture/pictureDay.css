@@ -12,10 +12,15 @@
 
 .eventTitle{
     font-size: 1.5rem;
+    font-family: "cooper";
 }
 
 .eventBlock iframe{
     width: 100vw;
+}
+
+.eventLabelSelector{
+    font-family: 'cooper';
 }
 
 
@@ -46,6 +51,18 @@
         width: auto;
     }
 
+    .eventBlock iframe{
+        height: 100vh;
+    }
+
+    .eventText{
+        font-size: 1.5rem;
+    }
+
+}
+
+@media screen and (min-height: 751px){
+    
 }
 
 
