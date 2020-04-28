@@ -4,7 +4,7 @@ import Axios from 'axios';
 import SearchBar from './SearchBar';
 import ImageList from './ImageList';
 
-const NasaAPI = () => {
+const SearchImages = () => {
   const [images, setImages] = useState([]);
   const [keywords, setKeywords] = useState('');
   // const [tags, setTags] = useState([]);
@@ -20,22 +20,18 @@ const NasaAPI = () => {
   };
 
   return (
-    <Switch>
-      <Route path="/">
-        <div className="App">
-          <header className="App-header">
-            <SearchBar
-              keywords={keywords}
-              onSearch={search}
-              setKeywords={setKeywords}
-            />
-            <ImageList images={images} />
-            <img src={images} alt="" />
-          </header>
-        </div>
-      </Route>
-    </Switch>
+    <div className="App">
+      <header className="App-header">
+        <SearchBar
+          keywords={keywords}
+          onSearch={search}
+          setKeywords={setKeywords}
+        />
+        <ImageList images={images} />
+        <img src={images} alt="" />
+      </header>
+    </div>
   );
 };
 
-export default NasaAPI;
+export default SearchImages;
