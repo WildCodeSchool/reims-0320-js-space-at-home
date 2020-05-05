@@ -3,6 +3,13 @@
     padding: 1rem;
     text-align: justify;
 }
+
+.instructionsText{
+  font-family: 'Suravaram', serif;
+  font-size: 1.8rem;
+  text-align: center; 
+}
+
 @media (max-width: 750px) {
     .instructionsBlock {
       display: none;
