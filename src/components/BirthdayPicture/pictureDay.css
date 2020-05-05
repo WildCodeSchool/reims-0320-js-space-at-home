@@ -15,10 +15,6 @@
     font-family: "cooper";
 }
 
-.eventBlock{
-    height: 90vh;
-}
-
 .eventBlock iframe{
     width: 100vw;
 }
