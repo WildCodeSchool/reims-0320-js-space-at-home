@@ -13,8 +13,6 @@ function App() {
       <div className="pageBlock">
         <Instructions />
         <PictureDay />
-      </div>
-      <div>
         <SearchImages />
         <ButtonTop />
         <Footer />
