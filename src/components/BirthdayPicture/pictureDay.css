@@ -13,6 +13,7 @@
 .eventTitle{
     font-size: 1.5rem;
     font-family: "Audiowide";
+    margin-bottom: 0.8rem;
 }
 
 .eventBlock iframe{
@@ -21,6 +22,9 @@
 
 .eventLabelSelector{
     font-family: 'cooper';
+    font-size: 1.2rem;
+    padding: 1rem;
+    text-align: center;
 }
 
 
@@ -32,11 +36,21 @@
     background-color: black;
 }
 
+.eventAllButton{
+    display: flex;
+    justify-content: space-around;
+}
+
+.eventButton{
+    margin-bottom: 1rem;
+}
+
 .eventText{
     text-align: left;
     font-family: "Suravaram", serif;
     letter-spacing: 0.5px;
     line-height: 1.1;
+    font-size: 1.5rem;
 }
 
 @media screen and  (max-height: 750px){
@@ -65,9 +79,14 @@
 
 @media screen and (min-width: 851px){
 
-    .eventLabelSelector{
-        font-size: 1.2rem;
+    
+
+    .eventSelectorBlock{
         text-align: center;
+    }
+
+    .eventTitle{
+        padding: 1.5rem;
     }
 
     .eventText{

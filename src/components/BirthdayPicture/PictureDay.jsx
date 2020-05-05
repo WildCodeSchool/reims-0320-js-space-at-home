@@ -57,7 +57,7 @@ class PictureDay extends React.Component {
       };
       return (
         <div className="eventPage">
-          <div className="eventPage">
+          <div className="eventSelectorBlock">
             <label htmlFor="date" className="eventLabelSelector">
               Select your Birthday :
               <input
@@ -72,12 +72,14 @@ class PictureDay extends React.Component {
                 }}
               />
             </label>
-            <button type="button" onClick={() => prevNext('-')}>
-              Previous Day
-            </button>
-            <button type="button" onClick={() => prevNext('+')}>
-              Next Day
-            </button>
+            <div className="eventAllButton">
+              <button className="eventButton" type="button" onClick={() => prevNext('-')}>
+                Previous Day
+              </button>
+              <button className="eventButton" type="button" onClick={() => prevNext('+')}>
+                Next Day
+              </button>
+            </div>
           </div>
           <div>
             <h1 className="eventTitle">Picture at your birthday :</h1>
