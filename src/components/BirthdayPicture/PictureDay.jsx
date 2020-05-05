@@ -86,7 +86,7 @@ class PictureDay extends React.Component {
             <div className="eventBlock">
               {url.includes('youtube')
                 ? <iframe src={url} title="youtubeVideo" allowFullScreen />
-                : <div><img className="eventImage" src={url} alt="pictureDay" /></div>}
+                : <div><img className="eventImage" src={url} alt="pictureDay" intrinsicsize="250 x 200" /></div>}
               <p className="eventText">{concept}</p>
             </div>
           </div>
