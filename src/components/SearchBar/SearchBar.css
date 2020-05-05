@@ -31,3 +31,21 @@
   cursor: pointer;
   font-size: 20px;
 }
+
+.SearchBar{
+  display: flex;
+  justify-content: center;
+}
+
+.ImageApi{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+}
+
+.ListImages{
+  max-width: 50vh;
+  max-height: 50vh;
+  display: flex;
+  justify-content: space-around;
+}
