@@ -37,8 +37,6 @@ class PictureDay extends React.Component {
             concept: data.explanation,
           });
         });
-      const larg = (document.body.clientWidth);
-      console.log(larg)
     }
 
     render() {
