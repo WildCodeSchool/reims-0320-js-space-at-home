@@ -39,7 +39,7 @@
 
 .ImageApi{
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   justify-items: center;
 }
 
@@ -47,5 +47,22 @@
   max-width: 50vh;
   max-height: 50vh;
   display: flex;
-  justify-content: space-around;
+  margin-top: 5rem;
+  border-radius: 20px;
+}
+
+@media (max-width: 750px) {
+  .ImageApi{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+  }
+
+  .ListImages{
+    max-width: 40vh;
+    max-height: 60vh;
+    display: flex;
+    margin-top: 5rem;
+    border-radius: 20px;
+}
 }
