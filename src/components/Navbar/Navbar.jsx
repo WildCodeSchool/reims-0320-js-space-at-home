@@ -1,36 +1,86 @@
-import React from 'react';
-import './Navbar.css';
+import React, { useState } from 'react';
 import {
-  Link, BrowserRouter, Switch, Route,
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink,
+} from 'reactstrap';
+import {
+  BrowserRouter as
+  Router,
+  Switch,
+  Route,
+  Link,
 } from 'react-router-dom';
-import Planets from '../Planets/Planets';
-import Satellites from '../Satellites/Satellites';
-import SolarSystem from '../SolarSystem/SolarSystem';
-import Event from '../Event/PictureDay';
-import Moons from '../Moons/Moons';
+import './Navbar.css';
+import Instructions from '../Instructions/Instructions';
+import PictureDay from '../BirthdayPicture/PictureDay';
 
-const Navbar = () => (
-  <BrowserRouter>
-    <header>
-      <nav>
-        <ul className="navbar_container">
-          <img className="navbar_logo" src="" alt="logo" />
-          <li className="navbar_title"><Link to="/">Space at Home</Link></li>
-          <li className="navbar_sections"><Link to="/Planets">Planets</Link></li>
-          <li className="navbar_sections"><Link to="/Satellites">Satellites</Link></li>
-          <li className="navbar_sections"><Link to="/Moons">Moons</Link></li>
-          <li className="navbar_sections"><Link to="/SolarSystem">Solar System</Link></li>
-        </ul>
-      </nav>
-    </header>
-    <Switch>
-      <Route exact path="/" component={Event} />
-      <Route path="/Planets" component={Planets} />
-      <Route path="/Satellites" component={Satellites} />
-      <Route path="/SolarSystem" component={SolarSystem} />
-      <Route path="/Moons" component={Moons} />
-    </Switch>
-  </BrowserRouter>
-);
+const NavBarNS = props => {
+  const [isOpen, setIsOpen] = useState(false);
 
-export default Navbar;
+  const toggle = () => setIsOpen(!isOpen);
+
+  return (
+    <div>
+      <Router>
+        <Navbar color="light" light expand="md">
+          <NavbarBrand>
+            <Link className="linkTitleNavBar" to="/">
+              Born In Space
+            </Link>
+          </NavbarBrand>
+          <NavbarToggler onClick={toggle} />
+          <Collapse isOpen={isOpen} navbar>
+            <Nav className="mr-auto" navbar>
+              <NavItem>
+                <NavLink>
+                  <Link className="linkNavBar" to="/Instruction">
+                    Instruction
+                  </Link>
+                </NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink>
+                  <Link className="linkNavBar" to="/BirthdayPicture">
+                    Birthday Picture
+                  </Link>
+                </NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink>
+                  <Link className="linkNavBar" to="/SearchBar">
+                    SearchBar
+                  </Link>
+                </NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink>
+                  <Link className="linkNavBar" to="/Contact">
+                    Contact
+                  </Link>
+                </NavLink>
+              </NavItem>
+            </Nav>
+          </Collapse>
+        </Navbar>
+        <Switch>
+          <Route path="/Instruction">
+            <Instructions />
+          </Route>
+          <Route path="/BirthdayPicture">
+            <PictureDay />
+          </Route>
+          <Route path="/SearchBar" />
+          <Route path="/Contact" />
+          <Route exact path="/" />
+        </Switch>
+      </Router>
+    </div>
+  );
+};
+
+export default NavBarNS;

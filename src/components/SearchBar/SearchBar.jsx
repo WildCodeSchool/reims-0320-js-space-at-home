@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import Button from './Button';
 import TextInput from './TextInput';
+import './SearchBar.css';
 
 const SearchBar = ({
-   keywords, onSearch, setKeywords, style 
+   keywords, onSearch, setKeywords
 }) => (
-  <div style={style}>
+  <div className="SearchBar">
     <TextInput setText={setKeywords} text={keywords} />
     <Button onClick={onSearch}>Go !</Button>
   </div>

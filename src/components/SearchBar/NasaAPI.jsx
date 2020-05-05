@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import Axios from 'axios';
 import SearchBar from './SearchBar';
 import ImageList from './ImageList';
+import './SearchBar.css';
+
 
 const SearchImages = () => {
   const [images, setImages] = useState([]);
@@ -18,16 +20,16 @@ const SearchImages = () => {
   };
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <SearchBar
-          keywords={keywords}
-          onSearch={search}
-          setKeywords={setKeywords}
-        />
-        <ImageList images={images} />
-        <img src={images} alt="" />
-      </header>
+    <div className="SearchBarComponent">
+      <SearchBar
+        keywords={keywords}
+        onSearch={search}
+        setKeywords={setKeywords}
+      />
+      <div className="ImageApi">
+        <ImageList images={images} className="ImageList" />
+      </div>
+      <img src={images} className="ImageList" alt="" />
     </div>
   );
 };
