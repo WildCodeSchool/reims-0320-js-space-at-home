@@ -76,6 +76,7 @@
 
     .eventImage{
         width: 50vw;
+        max-height:85vh;
     }
 
     .eventText{
