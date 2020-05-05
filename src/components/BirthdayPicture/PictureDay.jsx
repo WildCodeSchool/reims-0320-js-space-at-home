@@ -2,6 +2,7 @@ import React from 'react';
 import Axios from 'axios';
 import './pictureDay.css';
 import dateFormat from 'dateformat';
+import { Button } from 'reactstrap';
 
 const today = () => dateFormat(new Date(), 'yyyy-mm-dd');
 class PictureDay extends React.Component {
