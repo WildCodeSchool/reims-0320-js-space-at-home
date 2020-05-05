@@ -4,6 +4,7 @@ import './App.css';
 import Instructions from './components/Instructions/Instructions';
 import ButtonTop from './components/ButtonTop/ButtonTop';
 import Footer from './components/Footer/Footer';
+import SearchImages from './components/SearchBar/NasaAPI';
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <div className="pageBlock">
         <Instructions />
         <PictureDay />
+        <SearchImages />
         <ButtonTop />
         <Footer />
       </div>
