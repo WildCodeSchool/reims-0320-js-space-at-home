@@ -1,17 +1,22 @@
 .linkNavBar {
-  color: rgba(0, 0, 0, 0.9);
+  color: white;
 }
 
 .linkNavBar:hover {
-  color: rgba(0, 0, 0, 0.9);
+  color: white;
   text-decoration: none;
 }
 
 .linkTitleNavBar {
-  color: rgba(0, 0, 0, 0.9);
+  color: white;
 }
 
 .linkTitleNavBar:hover {
-  color: rgba(0, 0, 0, 0.9);
+  color: white;
   text-decoration: none;
+}
+
+.navbarBlock{
+  background-color: #2B3259;
+  color: white;
 }

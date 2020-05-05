@@ -6,7 +6,7 @@ import ButtonTop from './components/ButtonTop/ButtonTop';
 import NavBarMB from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 import SearchImages from './components/SearchBar/NasaAPI';
-
+import Title from './components/Titre';
 
 
 function App() {
@@ -14,6 +14,7 @@ function App() {
     <>
       <div className="pageBlock">
         <NavBarMB />
+        <Title />
         <Instructions />
         <PictureDay />
         <SearchImages />

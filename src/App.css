@@ -1,5 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron&display=swap");
+
 .pageBlock{
   color: white;
-  background-color: black;
-  background-image: url(https://technology.nasa.gov/img/warp.space.png);
+  background-color: #000124;
+}
+
+.firstTitle{
+  text-align: center;
+  font-family: 'Audiowide';
+  font-size: 4rem;
 }

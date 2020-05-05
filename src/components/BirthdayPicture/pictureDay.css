@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron&display=swap");
 
 .eventPage{
-    background-color:black;
+    background-color:#000124;
 }
 
 .eventImage{
@@ -69,43 +69,8 @@
         text-align: center;
     }
 
-    .eventBlock{
-        display: flex;
-        height: 100vh;
-    }
-
-    .eventImage{
-        width: 50vw;
-        max-height:85vh;
-    }
-
     .eventText{
         font-size: 1.5rem;
     }
 
 }
-
-
-/*
-.eventTitle{
-    color: white;
-}
-
-.eventBlock{
-    display: flex;
-}
-
-.eventImage{
-    height: 60vh;
-}
-
-.eventText {
-    color: white;
-    font-size: 1rem;
-    padding: 1rem;
-    text-align: justify;
-    background: none;
-    font-family: Orbitron;*/
-
-
-
