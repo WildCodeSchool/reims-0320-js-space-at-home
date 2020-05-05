@@ -37,12 +37,26 @@ class PictureDay extends React.Component {
             concept: data.explanation,
           });
         });
+      const larg = (document.body.clientWidth);
+      console.log(larg)
     }
 
     render() {
       const {
         url, concept, dateComp,
       } = this.state;
+      const prevNext = (operator) => {
+        const date = new Date(dateComp);
+
+        if (operator === '+') {
+          date.setDate(date.getDate() + 1);
+        } else {
+          date.setDate(date.getDate() - 1);
+        }
+        if ((date <= new Date()) && (date >= new Date('1995-06-16'))) {
+          this.setState({ dateComp: dateFormat(date, 'yyyy-mm-dd') });
+        }
+      };
       return (
         <div className="eventPage">
           <div className="eventPage">
@@ -60,12 +74,18 @@ class PictureDay extends React.Component {
                 }}
               />
             </label>
+            <button type="button" onClick={() => prevNext('-')}>
+              Previous Day
+            </button>
+            <button type="button" onClick={() => prevNext('+')}>
+              Next Day
+            </button>
           </div>
           <div>
             <h1 className="eventTitle">Picture at your birthday :</h1>
             <div className="eventBlock">
               {url.includes('youtube')
-                ? <iframe src={url} title="youtubeVideo" allowFullScreen="true" />
+                ? <iframe src={url} title="youtubeVideo" allowFullScreen />
                 : <div><img className="eventImage" src={url} alt="pictureDay" /></div>}
               <p className="eventText">{concept}</p>
             </div>

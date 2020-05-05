@@ -4,6 +4,10 @@ import './App.css';
 import Instructions from './components/Instructions/Instructions';
 import ButtonTop from './components/ButtonTop/ButtonTop';
 import NavBarMB from './components/Navbar/Navbar';
+import Footer from './components/Footer/Footer';
+import SearchImages from './components/SearchBar/NasaAPI';
+
+
 
 function App() {
   return (
@@ -12,7 +16,9 @@ function App() {
         <NavBarMB />
         <Instructions />
         <PictureDay />
+        <SearchImages />
         <ButtonTop />
+        <Footer />
       </div>
     </>
   );

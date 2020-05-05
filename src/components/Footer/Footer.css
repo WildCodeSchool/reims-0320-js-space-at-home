@@ -1,0 +1,44 @@
+.footerBlock {
+    background: rgb(10, 20, 46);
+    padding: 1em;
+}
+
+.titleFooter {
+    text-align: center;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.copyrightFooter {
+    text-align: center;
+}
+
+.nameFooter {
+    display: flex;
+    flex-direction: row;
+    margin-left: 1em;
+    line-height: 2em;
+}
+
+#name1 {
+    margin-right: 2em;
+}
+
+.nameFooter a:link {
+    color: white;
+    text-decoration: none;
+}
+
+.nameFooter a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+.nameFooter a:hover {
+    text-decoration: underline;
+    color: gray;
+}
+
+.explanationFooter {
+    text-align: center;
+}
