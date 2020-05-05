@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Button from './Button';
 import TextInput from './TextInput';
 import './SearchBar.css';
