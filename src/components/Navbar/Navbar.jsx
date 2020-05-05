@@ -25,9 +25,9 @@ const NavBarNS = props => {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <div>
+    <div className="navbarBlock">
       <Router>
-        <Navbar color="light" light expand="md">
+        <Navbar light expand="md">
           <NavbarBrand>
             <Link className="linkTitleNavBar" to="/">
               Born In Space
