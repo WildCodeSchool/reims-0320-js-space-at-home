@@ -58,7 +58,7 @@ class PictureDay extends React.Component {
       };
       return (
         <div className="eventPage">
-          <div className="eventPage">
+          <div className="eventSelectorBlock">
             <label htmlFor="date" className="eventLabelSelector">
               Select your Birthday :
               <input
@@ -73,19 +73,21 @@ class PictureDay extends React.Component {
                 }}
               />
             </label>
-            <Button outline color="secondary" type="button" onClick={() => prevNext('-')}>
-              Previous Day
-            </Button>
-            <Button outline color="secondary" type="button" onClick={() => prevNext('+')}>
-              Next Day
-            </Button>
+            <div className="eventAllButton">
+              <button className="eventButton" type="button" onClick={() => prevNext('-')}>
+                Previous Day
+              </button>
+              <button className="eventButton" type="button" onClick={() => prevNext('+')}>
+                Next Day
+              </button>
+            </div>
           </div>
           <div>
             <h1 className="eventTitle">Picture at your birthday :</h1>
             <div className="eventBlock">
               {url.includes('youtube')
-                ? <iframe src={url} title="youtubeVideo" allowFullScreen />
-                : <div><img className="eventImage" src={url} alt="pictureDay" intrinsicsize="250 x 200" /></div>}
+                ? <iframe className="eventIframe" src={url} title="youtubeVideo" allowFullScreen />
+                : <div><img className="eventImage" src={url} alt="pictureDay" /></div>}
               <p className="eventText">{concept}</p>
             </div>
           </div>
