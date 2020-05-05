@@ -3,6 +3,7 @@
 .pageBlock{
   color: white;
   background-color: #000124;
+  min-height: 100vh;
 }
 
 .firstTitle{
