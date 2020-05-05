@@ -11,7 +11,7 @@ const SearchImages = () => {
 
   const search = () => {
     Axios.get(
-      `https://images-api.nasa.gov/search?q=${keywords}`,
+      `https://images-api.nasa.gov/search?q=${keywords}&media_type=image`,
     )
       .then((response) => response.data)
       .then((data) => {

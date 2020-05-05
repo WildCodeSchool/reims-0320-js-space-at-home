@@ -2,6 +2,7 @@ import React from 'react';
 import Axios from 'axios';
 import './pictureDay.css';
 import dateFormat from 'dateformat';
+import { Button } from 'reactstrap';
 
 const today = () => dateFormat(new Date(), 'yyyy-mm-dd');
 class PictureDay extends React.Component {
@@ -72,12 +73,12 @@ class PictureDay extends React.Component {
                 }}
               />
             </label>
-            <button type="button" onClick={() => prevNext('-')}>
+            <Button outline color="secondary" type="button" onClick={() => prevNext('-')}>
               Previous Day
-            </button>
-            <button type="button" onClick={() => prevNext('+')}>
+            </Button>
+            <Button outline color="secondary" type="button" onClick={() => prevNext('+')}>
               Next Day
-            </button>
+            </Button>
           </div>
           <div>
             <h1 className="eventTitle">Picture at your birthday :</h1>
