@@ -22,7 +22,7 @@ function App() {
   return (
     <>
       <Media query="(min-width: 851px)">
-        {matches => {
+        {matches =>  {
           return matches ? (
             <div className="pageBlock">
               <Titre />
@@ -47,7 +47,8 @@ function App() {
                     <SearchBar />
                   </Route>
                   <Route path="/Contact" />
-                  <Route exact path="/" />
+                  <Route exact path="/" component={PictureDay} />
+                  <Route />
                 </Switch>
               </Router>
             </div>
