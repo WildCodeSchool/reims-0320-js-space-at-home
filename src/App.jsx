@@ -16,6 +16,7 @@ import SearchImages from './components/SearchBar/NasaAPI';
 import Navbar from './components/Navbar/Navbar';
 import Titre from './components/Titre';
 import SearchBar from './components/SearchBar/SearchBar';
+import Contact from './components/Contact/Contact';
 
 
 function App() {
