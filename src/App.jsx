@@ -23,7 +23,7 @@ function App() {
   return (
     <>
       <Media query="(min-width: 851px)">
-        {matches =>  {
+        {(matches) =>  {
           return matches ? (
             <div className="pageBlock">
               <Titre />
