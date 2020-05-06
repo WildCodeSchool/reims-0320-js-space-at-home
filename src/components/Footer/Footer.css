@@ -13,32 +13,25 @@
     text-align: center;
 }
 
-.nameFooter {
-    display: flex;
-    flex-direction: row;
-    margin-left: 1em;
-    line-height: 2em;
-}
-
-#name1 {
-    margin-right: 2em;
-}
-
-.nameFooter a:link {
-    color: white;
-    text-decoration: none;
-}
-
-.nameFooter a:visited {
-    color: white;
-    text-decoration: none;
-}
-
-.nameFooter a:hover {
-    text-decoration: underline;
-    color: gray;
-}
-
 .explanationFooter {
     text-align: center;
+}
+
+@media screen and (min-width: 851px){
+
+    .createdFooter{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .createdFooter a:link {
+        color: white;
+    }
+    
+    .createdFooter a:visited {
+        color: white;
+    }
+    
+
+
 }

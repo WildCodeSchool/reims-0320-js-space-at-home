@@ -1,12 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron&display=swap");
 
-*{
-  overflow-x: hidden;
-}
-
 .pageBlock{
   color: white;
   background-color: #000124;
+  overflow-x: hidden;
   min-height: 100vh;
 }
 
