@@ -10,6 +10,9 @@ import {
 } from 'reactstrap';
 import {
   BrowserRouter as
+  Router,
+  Switch,
+  Route,
   Link,
 } from 'react-router-dom';
 import './Navbar.css';
