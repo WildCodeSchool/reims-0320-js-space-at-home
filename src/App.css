@@ -4,6 +4,7 @@
   color: white;
   background-color: #000124;
   overflow-x: hidden;
+  min-height: 100vh;
 }
 
 .firstTitle{
