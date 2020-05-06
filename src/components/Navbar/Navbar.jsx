@@ -20,7 +20,7 @@ import Instructions from '../Instructions/Instructions';
 import PictureDay from '../BirthdayPicture/PictureDay';
 import SearchBar from '../SearchBar/SearchBar';
 
-const NavBarNS = props => {
+const NavBarNS = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
