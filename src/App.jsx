@@ -46,9 +46,7 @@ function App() {
                   <Route path="/SearchBar">
                     <SearchBar />
                   </Route>
-                  <Route path="/Contact" />
                   <Route exact path="/" component={PictureDay} />
-                  <Route />
                 </Switch>
               </Router>
             </div>
