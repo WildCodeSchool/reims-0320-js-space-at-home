@@ -23,35 +23,36 @@ function App() {
   return (
     <>
       <Media query="(min-width: 851px)">
-        {(matches) => (matches ? (
-          <div className="pageBlock">
-            <Titre />
-            <Instructions />
-            <PictureDay />
-            <SearchImages />
-            <ButtonTop />
-            <Footer />
-          </div>
-        ) : (
-          <div className="pageBlock">
-            <Router>
-              <Navbar />
-              <Switch>
-                <Route path="/Instructions">
-                  <Instructions />
-                </Route>
-                <Route path="/BirthdayPicture">
-                  <PictureDay />
-                </Route>
-                <Route path="/SearchBar">
-                  <SearchBar />
-                </Route>
-                <Route path="/Contact" />
-                <Route exact path="/" />
-              </Switch>
-            </Router>
-          </div>
-        ))}
+        {matches =>  {
+          return matches ? (
+            <div className="pageBlock">
+              <Titre />
+              <Instructions />
+              <PictureDay />
+              <SearchImages />
+              <ButtonTop />
+              <Footer />
+            </div>
+          ) : (
+            <div className="pageBlock">
+              <Router>
+                <Navbar />
+                <Switch>
+                  <Route path="/Instructions">
+                    <Instructions />
+                  </Route>
+                  <Route path="/BirthdayPicture">
+                    <PictureDay />
+                  </Route>
+                  <Route path="/SearchBar">
+                    <SearchBar />
+                  </Route>
+                  <Route exact path="/" component={PictureDay} />
+                </Switch>
+              </Router>
+            </div>
+          );
+        }}
       </Media>
     </>
   );

@@ -12,8 +12,8 @@
   text-align: center; 
 }
 
-@media (max-width: 750px) {
-    .instructionsBlock {
-      display: none;
-    }
+@media screen and (max-width: 812px) {
+  .instructionsText {
+    font-size: 1.5rem;
   }
+}
