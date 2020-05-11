@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Media from 'react-media';
 import {
   BrowserRouter as
   Router,
   Switch,
   Route,
+  Link,
 } from 'react-router-dom';
 
 import PictureDay from './components/BirthdayPicture/PictureDay';
@@ -17,9 +18,17 @@ import Navbar from './components/Navbar/Navbar';
 import Titre from './components/Titre';
 import SearchBar from './components/SearchBar/SearchBar';
 import Contact from './components/Contact/Contact';
+import PictureFavorite from './components/BirthdayPicture/PictureFavorite';
 
 
 function App() {
+  const [favorites, setFavorites] = useState([]);
+  const addFavorite = (favorite) => {
+    const transition = favorites.map((favo) => favo.url);
+    if (transition.indexOf(favorite.url) === -1) {
+      setFavorites([...favorites, favorite]);
+    }
+  };
   return (
     <>
       <Media query="(min-width: 851px)">
@@ -27,9 +36,24 @@ function App() {
           return matches ? (
             <div className="pageBlock">
               <Titre />
-              <Instructions />
-              <PictureDay />
-              <SearchImages />
+              <Router>
+                <Switch>
+                  <Route exact path="/">
+                    <Instructions />
+                    <PictureDay addToFavorite={addFavorite} />
+                    <Link to="/PictureFavorite">
+                      Favorite gallery
+                    </Link>
+                    <SearchImages />
+                  </Route>
+                  <Route path="/PictureFavorite">
+                    <PictureFavorite favorites={favorites} />
+                    <Link to="/">
+                      Back
+                    </Link>
+                  </Route>
+                </Switch>
+              </Router>
               <ButtonTop />
               <Footer />
             </div>
@@ -41,16 +65,18 @@ function App() {
                   <Route path="/Instructions">
                     <Instructions />
                   </Route>
-                  <Route path="/BirthdayPicture">
-                    <PictureDay />
-                  </Route>
                   <Route path="/SearchBar">
                     <SearchImages />
                   </Route>
                   <Route path="/Contact">
                     <Contact />
                   </Route>
-                  <Route exact path="/" component={PictureDay} />
+                  <Route path="/PictureFavorite">
+                    <PictureFavorite favorites={favorites} />
+                  </Route>
+                  <Route exact path="/">
+                    <PictureDay addToFavorite={addFavorite} />
+                  </Route>
                 </Switch>
               </Router>
             </div>

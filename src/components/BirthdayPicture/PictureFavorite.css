@@ -1,0 +1,12 @@
+.galleryBlock{
+    display: flex;
+}
+
+.galleryImage{
+    width: 15vw;
+}
+
+.galleryConcept{
+    font-size: 0.2rem;
+    width: 15vw;
+}
