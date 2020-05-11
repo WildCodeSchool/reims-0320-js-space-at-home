@@ -74,6 +74,9 @@ function App() {
                   <Route path="/PictureFavorite">
                     <PictureFavorite favorites={favorites} />
                   </Route>
+                  <Route path="/Contact">
+                    <Contact />
+                  </Route>
                   <Route exact path="/">
                     <PictureDay addToFavorite={addFavorite} />
                   </Route>
