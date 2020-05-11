@@ -24,11 +24,7 @@ import PictureFavorite from './components/BirthdayPicture/PictureFavorite';
 function App() {
   const [favorites, setFavorites] = useState([]);
   const addFavorite = (favorite) => {
-    const transition = [];
-    for (let i = 0; i < favorites.length; i++ ) {
-      transition[i] = favorites[i].url;
-    }
-    console.log(transition);
+    const transition = favorites.map((favo) => favo.url);
     if (transition.indexOf(favorite.url) === -1) {
       setFavorites([...favorites, favorite]);
     }
