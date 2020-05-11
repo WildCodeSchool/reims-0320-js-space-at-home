@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Media from 'react-media';
 import {
   BrowserRouter as
@@ -17,18 +17,30 @@ import Navbar from './components/Navbar/Navbar';
 import Titre from './components/Titre';
 import SearchBar from './components/SearchBar/SearchBar';
 import Contact from './components/Contact/Contact';
+import PictureFavorite from './components/BirthdayPicture/PictureFavorite';
 
 
 function App() {
+  const [favorites, setFavorites] = useState([]);
+  const addFavorite = (favorite) => {
+    const transition = [];
+    for (let i = 0; i < favorites.length; i++ ) {
+      transition[i] = favorites[i].url;
+    }
+    console.log(transition);
+    if (transition.indexOf(favorite.url) === -1) {
+      setFavorites([...favorites, favorite]);
+    }
+  };
   return (
     <>
       <Media query="(min-width: 851px)">
-        {(matches) =>  {
+        {(matches) => {
           return matches ? (
             <div className="pageBlock">
               <Titre />
               <Instructions />
-              <PictureDay />
+              <PictureDay addToFavorite={addFavorite} />
               <SearchImages />
               <ButtonTop />
               <Footer />
@@ -42,12 +54,17 @@ function App() {
                     <Instructions />
                   </Route>
                   <Route path="/BirthdayPicture">
-                    <PictureDay />
+                    <PictureDay addToFavorite={addFavorite} />
                   </Route>
                   <Route path="/SearchBar">
                     <SearchBar />
                   </Route>
-                  <Route exact path="/" component={PictureDay} />
+                  <Route path="/PictureFavorite">
+                    <PictureFavorite favorites={favorites} />
+                  </Route>
+                  <Route exact path="/">
+                    <PictureDay addToFavorite={addFavorite} />
+                  </Route>
                 </Switch>
               </Router>
             </div>

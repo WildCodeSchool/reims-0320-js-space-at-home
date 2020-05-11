@@ -61,6 +61,13 @@ const NavBarNS = () => {
                 </Link>
               </NavLink>
             </NavItem>
+            <NavItem>
+              <NavLink>
+                <Link className="linkNavBar" to="/PictureFavorite">
+                  FavoritePicture
+                </Link>
+              </NavLink>
+            </NavItem>
           </Nav>
         </Collapse>
       </Navbar>
