@@ -42,7 +42,7 @@ const NavBarNS = () => {
             </NavItem>
             <NavItem>
               <NavLink>
-                <Link className="linkNavBar" to="/BirthdayPicture">
+                <Link className="linkNavBar" to="/">
                   Birthday Picture
                 </Link>
               </NavLink>

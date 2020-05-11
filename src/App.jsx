@@ -5,6 +5,7 @@ import {
   Router,
   Switch,
   Route,
+  Link,
 } from 'react-router-dom';
 
 import PictureDay from './components/BirthdayPicture/PictureDay';
@@ -39,9 +40,24 @@ function App() {
           return matches ? (
             <div className="pageBlock">
               <Titre />
-              <Instructions />
-              <PictureDay addToFavorite={addFavorite} />
-              <SearchImages />
+              <Router>
+                <Switch>
+                  <Route exact path="/">
+                    <Instructions />
+                    <PictureDay addToFavorite={addFavorite} />
+                    <Link to="/PictureFavorite">
+                      Favorite gallery
+                    </Link>
+                    <SearchImages />
+                  </Route>
+                  <Route path="/PictureFavorite">
+                    <PictureFavorite favorites={favorites} />
+                    <Link to="/">
+                      Back
+                    </Link>
+                  </Route>
+                </Switch>
+              </Router>
               <ButtonTop />
               <Footer />
             </div>
@@ -52,9 +68,6 @@ function App() {
                 <Switch>
                   <Route path="/Instructions">
                     <Instructions />
-                  </Route>
-                  <Route path="/BirthdayPicture">
-                    <PictureDay addToFavorite={addFavorite} />
                   </Route>
                   <Route path="/SearchBar">
                     <SearchBar />
