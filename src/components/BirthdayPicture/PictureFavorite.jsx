@@ -15,7 +15,9 @@ const PictureFavorite = ({ favorites }) => (
         </div>
       ))}
     </div>
-    <SendBP />
+    <SendBP
+      favorites={favorites}
+    />
   </>
 );
 

@@ -3,8 +3,8 @@ import Axios from 'axios';
 
 
 class SendBP extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       textMail: 'Comment your selection !',
     };
@@ -12,6 +12,8 @@ class SendBP extends React.Component {
 
   componentDidUpdate(prevProps, prevState) {
     const { textMail } = this.state;
+    const { favorites } = this.props;
+    console.log(favorites);
     if (prevState.textMail !== textMail) {
       this.render();
     }
@@ -25,7 +27,7 @@ class SendBP extends React.Component {
     }).then((response) => {
       if (response.data.status === 'success') {
         alert('Message Sent.');
-        this.resetForm()
+        this.resetForm();
       }else if(response.data.status === 'fail') {
         alert('Message failed to send.');
       }
