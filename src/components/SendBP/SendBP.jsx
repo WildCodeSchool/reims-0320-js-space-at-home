@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
+import Axios from 'axios';
+
 
 class SendBP extends React.Component {
   constructor() {
@@ -13,6 +15,21 @@ class SendBP extends React.Component {
     if (prevState.textMail !== textMail) {
       this.render();
     }
+  }
+
+  submitMail() {
+    Axios({
+      method: 'POST',
+      url: 'http://localhost:3002/send',
+      data: this.state,
+    }).then((response) => {
+      if (response.data.status === 'success') {
+        alert('Message Sent.');
+        this.resetForm()
+      }else if(response.data.status === 'fail') {
+        alert('Message failed to send.');
+      }
+    });
   }
 
   render() {
