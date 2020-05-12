@@ -14,8 +14,10 @@ class PictureDay extends React.Component {
       url: 'https://via.placeholder.com/550',
       concept: 'Explication photo du jour',
       dateComp: today(),
+      chosenName: '',
     };
     this.getPicture = this.getPicture.bind(this);
+    this.addFav = this.addFav.bind(this);
   }
 
   componentDidMount() {
@@ -25,9 +27,12 @@ class PictureDay extends React.Component {
 
   componentDidUpdate(prevProps, prevState) {
     Aos.init({ duration: 1200 });
-    const { dateComp } = this.state;
+    const { dateComp, chosenName } = this.state;
     if (prevState.dateComp !== dateComp) {
       this.getPicture();
+    }
+    if (prevState.chosenName !== chosenName) {
+      this.addFav();
     }
   }
 
@@ -44,9 +49,15 @@ class PictureDay extends React.Component {
       });
   }
 
+  addFav = () => {
+    const { url, concept, chosenName } = this.state;
+    const { addToFavorite } = this.props;
+    addToFavorite({ url, concept, chosenName });
+  };
+
   render() {
     const {
-      url, concept, dateComp,
+      url, concept, dateComp, chosenName,
     } = this.state;
     const prevNext = (operator) => {
       const date = new Date(dateComp);
@@ -59,11 +70,6 @@ class PictureDay extends React.Component {
       if ((date <= new Date()) && (date >= new Date('1995-06-16'))) {
         this.setState({ dateComp: dateFormat(date, 'yyyy-mm-dd') });
       }
-    };
-
-    const addFav = () => {
-      const { addToFavorite } = this.props;
-      addToFavorite({ url, concept });
     };
 
     return (
@@ -98,11 +104,21 @@ class PictureDay extends React.Component {
             {url.includes('youtube')
               ? <iframe className="eventIframe" src={url} title="youtubeVideo" allowFullScreen />
               : <div><img className="eventImage" src={url} alt="pictureDay" /></div>}
-
             <p data-aos="fade-up" className="eventText">{concept}</p>
-            <button className="favButton" type="button" onClick={() => addFav()}>
-              Ajouter
-            </button>
+            <form
+              onSubmit={(event) => {
+                const chosenNameIn = new FormData(event.target).get('chosenName');
+                this.setState({ chosenName: chosenNameIn });
+                event.preventDefault();
+              }}
+            >
+              <label htmlFor="chosenName">
+                <input type="text" id="chosenName" name="chosenName" />
+              </label>
+              <button className="favButton" type="submit">
+                Ajouter
+              </button>
+            </form>
           </div>
         </div>
       </div>
