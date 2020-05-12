@@ -42,7 +42,7 @@ const NavBarNS = () => {
             </NavItem>
             <NavItem>
               <NavLink>
-                <Link className="linkNavBar" to="/BirthdayPicture">
+                <Link className="linkNavBar" to="/">
                   Birthday Picture
                 </Link>
               </NavLink>
@@ -58,6 +58,13 @@ const NavBarNS = () => {
               <NavLink>
                 <Link className="linkNavBar" to="/Contact">
                   Contact
+                </Link>
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink>
+                <Link className="linkNavBar" to="/PictureFavorite">
+                  FavoritePicture
                 </Link>
               </NavLink>
             </NavItem>

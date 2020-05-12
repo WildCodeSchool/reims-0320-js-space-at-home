@@ -8,8 +8,8 @@ import 'aos/dist/aos.css';
 
 const today = () => dateFormat(new Date(), 'yyyy-mm-dd');
 class PictureDay extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       url: 'https://via.placeholder.com/550',
       concept: 'Explication photo du jour',
@@ -31,73 +31,83 @@ class PictureDay extends React.Component {
     }
   }
 
-    getPicture = () => {
-      const { dateComp } = this.state;
-      const url = `https://api.nasa.gov/planetary/apod?date=${dateComp}&hd=true&api_key=tJEyrCHFpmMVohJmDqxBnDac7xXMWQeEUeYNIcKc`;
-      Axios.get(url)
-        .then((response) => response.data)
-        .then((data) => {
-          this.setState({
-            url: data.url,
-            concept: data.explanation,
-          });
+  getPicture = () => {
+    const { dateComp } = this.state;
+    const url = `https://api.nasa.gov/planetary/apod?date=${dateComp}&hd=true&api_key=tJEyrCHFpmMVohJmDqxBnDac7xXMWQeEUeYNIcKc`;
+    Axios.get(url)
+      .then((response) => response.data)
+      .then((data) => {
+        this.setState({
+          url: data.url,
+          concept: data.explanation,
         });
-    }
+      });
+  }
 
-    render() {
-      const {
-        url, concept, dateComp,
-      } = this.state;
-      const prevNext = (operator) => {
-        const date = new Date(dateComp);
+  render() {
+    const {
+      url, concept, dateComp,
+    } = this.state;
+    const prevNext = (operator) => {
+      const date = new Date(dateComp);
 
-        if (operator === '+') {
-          date.setDate(date.getDate() + 1);
-        } else {
-          date.setDate(date.getDate() - 1);
-        }
-        if ((date <= new Date()) && (date >= new Date('1995-06-16'))) {
-          this.setState({ dateComp: dateFormat(date, 'yyyy-mm-dd') });
-        }
-      };
-      return (
-        <div className="eventPage">
-          <div className="eventSelectorBlock">
-            <label htmlFor="date" className="eventLabelSelector">
-              Select your Birthday :
-              <input
-                type="date"
-                id="date"
-                name="date"
-                value={dateComp}
-                min="1995-06-16"
-                max={today()}
-                onChange={(event) => {
-                  this.setState({ dateComp: event.target.value });
-                }}
-              />
-            </label>
-            <div className="eventAllButton">
-              <button color="" className="eventButton" type="button" onClick={() => prevNext('-')}>
-                Previous Day
-              </button>
-              <button className="eventButton" type="button" onClick={() => prevNext('+')}>
-                Next Day
-              </button>
-            </div>
-          </div>
-          <div>
-            <h1 className="eventTitle">Picture at your birthday :</h1>
-            <div className="eventBlock">
-              {url.includes('youtube')
-                ? <iframe className="eventIframe" src={url} title="youtubeVideo" allowFullScreen />
-                : <div><img className="eventImage" src={url} alt="pictureDay" /></div>}
-              <p data-aos="fade-up" className="eventText">{concept}</p>
-            </div>
+      if (operator === '+') {
+        date.setDate(date.getDate() + 1);
+      } else {
+        date.setDate(date.getDate() - 1);
+      }
+      if ((date <= new Date()) && (date >= new Date('1995-06-16'))) {
+        this.setState({ dateComp: dateFormat(date, 'yyyy-mm-dd') });
+      }
+    };
+
+    const addFav = () => {
+      const { addToFavorite } = this.props;
+      addToFavorite({ url, concept });
+    };
+
+    return (
+      <div className="eventPage">
+        <div className="eventSelectorBlock">
+          <label htmlFor="date" className="eventLabelSelector">
+            Select your Birthday :
+            <input
+              type="date"
+              id="date"
+              name="date"
+              value={dateComp}
+              min="1995-06-16"
+              max={today()}
+              onChange={(event) => {
+                this.setState({ dateComp: event.target.value });
+              }}
+            />
+          </label>
+          <div className="eventAllButton">
+            <Button className="eventButton" type="button" onClick={() => prevNext('-')}>
+              Previous Day
+            </Button>
+            <Button className="eventButton" type="button" onClick={() => prevNext('+')}>
+              Next Day
+            </Button>
           </div>
         </div>
-      );
-    }
+        <div>
+          <h1 className="eventTitle">Picture at your birthday :</h1>
+          <div className="eventBlock">
+            {url.includes('youtube')
+              ? <iframe className="eventIframe" src={url} title="youtubeVideo" allowFullScreen />
+              : <div><img className="eventImage" src={url} alt="pictureDay" /></div>}
+
+            <p data-aos="fade-up" className="eventText">{concept}</p>
+            <button className="favButton" type="button" onClick={() => addFav()}>
+              Ajouter
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
 }
 
 export default PictureDay;
