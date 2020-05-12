@@ -9,6 +9,7 @@ const SearchImages = () => {
   const [images, setImages] = useState([]);
   const [keywords, setKeywords] = useState('');
 
+
   const search = () => {
     Axios.get(
       `https://images-api.nasa.gov/search?q=${keywords}&media_type=image`,
@@ -29,7 +30,6 @@ const SearchImages = () => {
       <div className="ImageApi">
         <ImageList images={images} className="ImageList" />
       </div>
-      <img src={images} className="ImageList" alt="" />
     </div>
   );
 };
