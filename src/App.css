@@ -2,7 +2,7 @@
 
 .pageBlock{
   color: white;
-  background-color: #000124;
+  background-image: url('http://www.aljanh.net/data/archive/img/1568875784.png');
   overflow-x: hidden;
   min-height: 100vh;
 }
@@ -10,7 +10,8 @@
 .firstTitle{
   text-align: center;
   font-family: 'Audiowide';
-  font-size: 6rem;
+  font-size: 7rem;
+  margin-top: 20rem;
 }
 
 @media screen and (max-width: 851px){
