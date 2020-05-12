@@ -34,6 +34,12 @@ class SendBP extends React.Component {
     });
   }
 
+  addTextMail() {
+    const { favorites } = this.props;
+    const result = favorites.map((favorite) => favorite.url);
+    return result.join(' ');
+  }
+
   render() {
     const { textMail } = this.state;
     return (
