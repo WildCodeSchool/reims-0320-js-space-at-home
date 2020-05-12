@@ -37,6 +37,36 @@
   justify-content: center;
 }
 
+.SearchBarComponent{
+  margin-top: 10rem;
+  margin-bottom: 20rem;
+
+}
+.ButtonIcon{
+  max-height: 2.5rem;
+}
+.buttonItem{
+  margin-left: 1rem;
+  border-radius: 50%;
+  border-color: rgb(109, 143, 238) ;
+  background-color: rgb(255, 255, 255);
+}
+.buttonItem:hover{
+  background-color: rgb(160, 193, 204);
+
+}
+
+.inputPhoto{
+ border-radius: 50px;
+ min-width: 30rem;
+ border-color: rgb(109, 143, 238);
+ background-color: rgb(34, 31, 31);
+ text-align: center;
+ color: cornsilk;
+ font-size: 24px;
+ font-weight: bold;
+}
+
 .ImageApi{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
