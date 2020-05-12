@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron&display=swap");
 
-.eventPage{
+/*.eventPage{
     background-color:#000124;
-}
+}*/
 
 .eventImage{
     height: auto;
@@ -43,8 +43,47 @@
 }
 
 .eventButton{
+    width: 15rem;
+    height: 3rem;
     margin-bottom: 1rem;
+    background:rgb(80, 80, 80);
+    color:rgb(231, 227, 227);
+    border: 1px solid rgb(80, 80, 80);
+    border-radius: 5px;
+    position:relative;
+    font-size:1.2rem;
+    padding:0 3em;
+    cursor:pointer;
+    transition:1000ms ease all;
+    outline:none;
+      }
+      
+.eventButton:hover{
+    background:rgb(185, 185, 185);
+    color: rgb(44, 44, 44);
 }
+.eventButton:before,.eventButton:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:5px;
+    width:0;
+    background: rgb(41, 77, 195);
+    transition:600ms ease all;
+}
+.eventButton:after{
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+}
+.eventButton:hover:before,.eventButton:hover:after{
+    width:100%;
+    transition:1000ms ease all;
+    border: none;
+}
+
 
 .eventText{
     text-align: left;

@@ -74,12 +74,12 @@ class PictureDay extends React.Component {
               />
             </label>
             <div className="eventAllButton">
-              <Button className="eventButton" type="button" onClick={() => prevNext('-')}>
+              <button color="" className="eventButton" type="button" onClick={() => prevNext('-')}>
                 Previous Day
-              </Button>
-              <Button className="eventButton" type="button" onClick={() => prevNext('+')}>
+              </button>
+              <button className="eventButton" type="button" onClick={() => prevNext('+')}>
                 Next Day
-              </Button>
+              </button>
             </div>
           </div>
           <div>
