@@ -5,63 +5,20 @@ import Axios from 'axios';
 class SendBP extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      textMail: 'Comment your selection !',
-    };
-  }
-
-  componentDidUpdate(prevProps, prevState) {
-    const { textMail } = this.state;
-    const { favorites } = this.props;
-    console.log(favorites);
-    if (prevState.textMail !== textMail) {
-      this.render();
-    }
-  }
-
-  submitMail() {
-    Axios({
-      method: 'POST',
-      url: 'http://localhost:3002/send',
-      data: this.state,
-    }).then((response) => {
-      if (response.data.status === 'success') {
-        alert('Message Sent.');
-        this.resetForm();
-      }else if(response.data.status === 'fail') {
-        alert('Message failed to send.');
-      }
-    });
-  }
-
-  addTextMail() {
-    const { favorites } = this.props;
-    const result = favorites.map((favorite) => favorite.url);
-    return result.join(' ');
+    this.state = {};
   }
 
   render() {
-    const { textMail } = this.state;
+    const copyAllUrl = () => {
+      const { favorites } = this.props;
+      const result = favorites.map((favorite) => favorite.url).join('\n');
+      document.execCommand('copy');
+      alert('Copied the text: ' + result.value);
+    };
+
     return (
       <div>
-        <form
-          onSubmit={(event) => {
-            const textMailIn = new FormData(event.target).get('sendMail');
-            this.setState({ textMail: textMailIn });
-            event.preventDefault();
-            console.log(textMailIn);
-          }}
-        >
-          <label htmlFor="sendMail">
-            <input
-              id="sendMail"
-              name="sendMail"
-              type="text"
-              placeholder={textMail}
-            />
-          </label>
-          <button type="submit">Send Mail</button>
-        </form>
+        <button type="button" onClick={() => copyAllUrl()}>Copy Urls</button>
       </div>
     );}
 }
