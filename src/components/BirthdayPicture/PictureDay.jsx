@@ -3,6 +3,8 @@ import Axios from 'axios';
 import './pictureDay.css';
 import dateFormat from 'dateformat';
 import { Button } from 'reactstrap';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 const today = () => dateFormat(new Date(), 'yyyy-mm-dd');
 class PictureDay extends React.Component {
@@ -20,9 +22,11 @@ class PictureDay extends React.Component {
 
   componentDidMount() {
     this.getPicture();
+    Aos.init({ duration: 1200 });
   }
 
   componentDidUpdate(prevProps, prevState) {
+    Aos.init({ duration: 1200 });
     const { dateComp, chosenName } = this.state;
     if (prevState.dateComp !== dateComp) {
       this.getPicture();
@@ -86,12 +90,12 @@ class PictureDay extends React.Component {
             />
           </label>
           <div className="eventAllButton">
-            <Button className="eventButton" type="button" onClick={() => prevNext('-')}>
+            <button className="eventButton" type="button" onClick={() => prevNext('-')}>
               Previous Day
-            </Button>
-            <Button className="eventButton" type="button" onClick={() => prevNext('+')}>
+            </button>
+            <button className="eventButton" type="button" onClick={() => prevNext('+')}>
               Next Day
-            </Button>
+            </button>
           </div>
         </div>
         <div>
@@ -100,8 +104,7 @@ class PictureDay extends React.Component {
             {url.includes('youtube')
               ? <iframe className="eventIframe" src={url} title="youtubeVideo" allowFullScreen />
               : <div><img className="eventImage" src={url} alt="pictureDay" /></div>}
-
-            <p className="eventText">{concept}</p>
+            <p data-aos="fade-up" className="eventText">{concept}</p>
             <form
               onSubmit={(event) => {
                 const chosenNameIn = new FormData(event.target).get('chosenName');

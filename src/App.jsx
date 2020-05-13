@@ -66,7 +66,10 @@ function App() {
                     <Instructions />
                   </Route>
                   <Route path="/SearchBar">
-                    <SearchBar />
+                    <SearchImages />
+                  </Route>
+                  <Route path="/Contact">
+                    <Contact />
                   </Route>
                   <Route path="/PictureFavorite">
                     <PictureFavorite favorites={favorites} />

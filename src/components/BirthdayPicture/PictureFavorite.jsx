@@ -1,8 +1,9 @@
 import React from 'react';
 import './PictureFavorite.css';
+import SendBP from '../SendBP/SendBP';
 
-const PictureFavorite = ({ favorites }) => {
-  return (
+const PictureFavorite = ({ favorites }) => (
+  <>
     <div className="galleryBlock">
       {favorites.map((favorite) => {
         return (
@@ -19,7 +20,10 @@ const PictureFavorite = ({ favorites }) => {
         );
       })}
     </div>
-  );
-};
+    <SendBP
+      favorites={favorites}
+    />
+  </>
+);
 
 export default PictureFavorite;
