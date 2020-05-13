@@ -5,7 +5,7 @@ import ImageList from './ImageList';
 import './SearchBar.css';
 
 
-const SearchImages = () => {
+function SearchImages() {
   const [images, setImages] = useState([]);
   const [keywords, setKeywords] = useState('');
   const [badSearch, setBadSearch] = useState(false);

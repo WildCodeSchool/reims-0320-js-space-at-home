@@ -5,7 +5,7 @@ import './SearchBar.css';
 
 
 const SearchBar = ({
-   keywords, onSearch, setKeywords
+  keywords, onSearch, setKeywords
 }) => (
   <>
     <div className="galleryExplanation">

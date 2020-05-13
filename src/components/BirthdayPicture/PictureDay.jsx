@@ -21,11 +21,11 @@ class PictureDay extends React.Component {
 
   componentDidMount() {
     this.getPicture();
-    Aos.init({ duration: 1200 });
+    Aos.init({ duration: 1800 });
   }
 
   componentDidUpdate(prevProps, prevState) {
-    Aos.init({ duration: 1200 });
+    Aos.init({ duration: 1800 });
     const { dateComp, chosenName } = this.state;
     if (prevState.dateComp !== dateComp) {
       this.getPicture();
@@ -101,8 +101,8 @@ class PictureDay extends React.Component {
           <h1 className="eventTitle">Picture at your birthday :</h1>
           <div className="eventBlock">
             {url.includes('youtube')
-              ? <iframe className="eventIframe" src={url} title="youtubeVideo" allowFullScreen />
-              : <div><img className="eventImage" src={url} alt="pictureDay" /></div>}
+              ? <iframe data-aos="zoom-in" className="eventIframe" src={url} title="youtubeVideo" allowFullScreen />
+              : <div><img data-aos="zoom-in" className="eventImage" src={url} alt="pictureDay" /></div>}
             <p data-aos="fade-up" className="eventText">{concept}</p>
             <form
               className="favForm"
@@ -113,9 +113,9 @@ class PictureDay extends React.Component {
               }}
             >
               <label className="favLabel" htmlFor="chosenName">
-                <input className="favInput" type="text" id="chosenName" name="chosenName" />
+                <input data-aos="fade-right" className="favInput" type="text" id="chosenName" name="chosenName" />
               </label>
-              <button className="favButton" type="submit">
+              <button data-aos="fade-left" className="favButton" type="submit">
                 Ajouter
               </button>
             </form>

@@ -81,6 +81,19 @@
   border-radius: 20px;
 }
 
+@media (min-width: 851px){
+.inputPhoto{
+  margin-top: 15rem;
+}
+.buttonItem{
+  margin-top: auto;
+}
+.seeMore{
+  font-size: 48px;
+}
+}
+
+@media (max-width: 851px) {
 .imageListError{
   text-align: center;
   font-size: 2rem;
@@ -90,6 +103,7 @@
 }
 
 @media (max-width: 750px) {
+
   .ImageApi{
     display: grid;
     grid-template-columns: repeat(1, 1fr);

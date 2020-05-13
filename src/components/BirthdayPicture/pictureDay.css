@@ -95,8 +95,8 @@
 }
 
 .favForm{
- display: flex;
- justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 .favLabel{
@@ -104,10 +104,22 @@
     text-align: center;
 }
 
-.favForm{
-    display: flex;
+.favInput{
+    max-width: 20rem;
+    background-color:  rgb(34,31, 31);
+    border-radius: 20%;
+    text-align: center;
+    color: white;
+    margin-left: 3rem;
 }
 
+.favButton{
+    border-radius: 50%;
+}
+
+.seeMore{
+    text-align: center;
+}
 @media screen and  (max-height: 750px){
 
     .eventBlock{
