@@ -81,6 +81,10 @@
   border-radius: 20px;
 }
 
+.galleryExplanation {
+  display: none;
+}
+
 @media (max-width: 750px) {
   .ImageApi{
     display: grid;
@@ -101,6 +105,7 @@
   }
 
   .galleryExplanation {
+    display: block;
     font-family: 'Suravaram', serif;
     font-size: 1.8rem;
     text-align: center; 
