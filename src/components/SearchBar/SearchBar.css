@@ -81,6 +81,11 @@
   border-radius: 20px;
 }
 
+.imageListError{
+  text-align: center;
+  font-size: 2rem;
+}
+
 @media (min-width: 851px){
 .inputPhoto{
   margin-top: 15rem;
@@ -94,9 +99,6 @@
 }
 
 @media (max-width: 851px) {
-.imageListError{
-  text-align: center;
-  font-size: 2rem;
 
 .galleryExplanation {
   display: none;
