@@ -13,7 +13,6 @@ class SendBP extends React.Component {
     const { favorites } = this.props;
     const result = favorites.map((favorite) => favorite.url).join('\n');
     const copyAllUrl = () => {
-      console.log(result);
       const copyText = document.getElementById('copyInput');
       copyText.select();
       copyText.setSelectionRange(0, 99999);
@@ -22,6 +21,12 @@ class SendBP extends React.Component {
 
     return (
       <div>
+        <label htmlFor="selectPicture">
+          <select name="selectPicture" id="selectPicture">
+            <option>Choose an option</option>
+            {favorites.map((picture) => <option>{picture.chosenName}</option>)}
+          </select>
+        </label>
         <input className="noneInput" type="textarea" value={result} id="copyInput" />
         <button type="button" onClick={() => copyAllUrl()}>Copy Urls</button>
       </div>
