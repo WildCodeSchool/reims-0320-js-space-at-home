@@ -99,4 +99,10 @@
   .inputPhoto {
     width: 70%;
   }
+
+  .galleryExplanation {
+    font-family: 'Suravaram', serif;
+    font-size: 1.8rem;
+    text-align: center; 
+  }
 }
