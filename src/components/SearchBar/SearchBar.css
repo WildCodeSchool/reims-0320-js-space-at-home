@@ -35,11 +35,11 @@
 .SearchBar{
   display: flex;
   justify-content: center;
+  margin-bottom: 4rem;
 }
 
 .SearchBarComponent{
-  margin-top: 10rem;
-  margin-bottom: 20rem;
+  margin-bottom: 10rem;
 
 }
 .ButtonIcon{
@@ -79,6 +79,11 @@
   display: flex;
   margin-top: 5rem;
   border-radius: 20px;
+}
+
+.imageListError{
+  text-align: center;
+  font-size: 2rem;
 }
 
 @media (max-width: 750px) {
