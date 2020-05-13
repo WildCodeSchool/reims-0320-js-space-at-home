@@ -2,6 +2,9 @@
     color: white;
 }
 
-.contactContact{
-    color: white;
+.createdContact {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    line-height: 2em;
 }
