@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron&display=swap");
 
-/*.eventPage{
-    background-color:#000124;
-}*/
+.eventPage{
+    margin-top: 10rem;
+}
 
 .eventImage{
     height: auto;
@@ -13,7 +13,8 @@
 .eventTitle{
     font-size: 1.5rem;
     font-family: "Audiowide";
-    margin-bottom: 0.8rem;
+    margin-bottom: 1rem;
+    text-align: center;
 }
 
 .eventBlock iframe{
@@ -91,6 +92,20 @@
     letter-spacing: 0.5px;
     line-height: 1.1;
     font-size: 1.5rem;
+}
+
+.favForm{
+ display: flex;
+ justify-content: center;
+}
+
+.favLabel{
+    display: flex;
+    text-align: center;
+}
+
+.favForm{
+    display: flex;
 }
 
 @media screen and  (max-height: 750px){

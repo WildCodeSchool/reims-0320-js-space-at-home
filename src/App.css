@@ -11,9 +11,12 @@
   text-align: center;
   font-family: 'Audiowide';
   font-size: 7rem;
-  margin-top: 20rem;
+  margin-top: 15rem;
 }
 
+.FavRoute{
+  text-align: center;
+}
 @media screen and (max-width: 851px){
 
   .firstTitle{

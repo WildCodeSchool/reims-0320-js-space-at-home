@@ -42,7 +42,7 @@ function App() {
                     <Instructions />
                     <PictureDay addToFavorite={addFavorite} />
                     <Link to="/PictureFavorite">
-                      Favorite gallery
+                      <p className="FavRoute">Favorite gallery</p>
                     </Link>
                     <SearchImages />
                   </Route>

@@ -2,7 +2,6 @@ import React from 'react';
 import Axios from 'axios';
 import './pictureDay.css';
 import dateFormat from 'dateformat';
-import { Button } from 'reactstrap';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 
@@ -106,14 +105,15 @@ class PictureDay extends React.Component {
               : <div><img className="eventImage" src={url} alt="pictureDay" /></div>}
             <p data-aos="fade-up" className="eventText">{concept}</p>
             <form
+              className="favForm"
               onSubmit={(event) => {
                 const chosenNameIn = new FormData(event.target).get('chosenName');
                 this.setState({ chosenName: chosenNameIn });
                 event.preventDefault();
               }}
             >
-              <label htmlFor="chosenName">
-                <input type="text" id="chosenName" name="chosenName" />
+              <label className="favLabel" htmlFor="chosenName">
+                <input className="favInput" type="text" id="chosenName" name="chosenName" />
               </label>
               <button className="favButton" type="submit">
                 Ajouter
