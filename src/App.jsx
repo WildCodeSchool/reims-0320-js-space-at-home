@@ -68,9 +68,6 @@ function App() {
                   <Route path="/SearchBar">
                     <SearchImages />
                   </Route>
-                  <Route path="/Contact">
-                    <Contact />
-                  </Route>
                   <Route path="/PictureFavorite">
                     <PictureFavorite favorites={favorites} />
                   </Route>
@@ -79,6 +76,9 @@ function App() {
                   </Route>
                   <Route exact path="/">
                     <PictureDay addToFavorite={addFavorite} />
+                    <Link to="/PictureFavorite">
+                      <p className="FavRoute">Favorite gallery</p>
+                    </Link>
                   </Route>
                 </Switch>
               </Router>

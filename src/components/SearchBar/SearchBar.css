@@ -58,7 +58,7 @@
 
 .inputPhoto{
  border-radius: 50px;
- min-width: 30rem;
+ max-width: 30rem;
  border-color: rgb(109, 143, 238);
  background-color: rgb(34, 31, 31);
  text-align: center;
@@ -81,6 +81,10 @@
   border-radius: 20px;
 }
 
+.galleryExplanation {
+  display: none;
+}
+
 @media (max-width: 750px) {
   .ImageApi{
     display: grid;
@@ -94,5 +98,16 @@
     display: flex;
     margin-top: 5rem;
     border-radius: 20px;
-}
+  }
+
+  .inputPhoto {
+    width: 70%;
+  }
+
+  .galleryExplanation {
+    display: block;
+    font-family: 'Suravaram', serif;
+    font-size: 1.8rem;
+    text-align: center; 
+  }
 }
