@@ -8,15 +8,20 @@ import './SearchBar.css';
 const SearchImages = () => {
   const [images, setImages] = useState([]);
   const [keywords, setKeywords] = useState('');
+  const [badSearch, setBadSearch] = useState(false);
 
 
   const search = () => {
-    Axios.get(
-      `https://images-api.nasa.gov/search?q=${keywords}&media_type=image`,
-    )
+    Axios.get(`https://images-api.nasa.gov/search?q=${keywords}&media_type=image`)
       .then((response) => response.data)
       .then((data) => {
-        setImages(data.collection.items);
+        const image = data.collection.items;
+        if (image.length === 0) {
+          setBadSearch(true);
+        } else {
+          setBadSearch(false);
+          setImages(data.collection.items);
+        }
       });
   };
 
@@ -27,8 +32,12 @@ const SearchImages = () => {
         onSearch={search}
         setKeywords={setKeywords}
       />
-      <div className="ImageApi">
-        <ImageList images={images} className="ImageList" />
+      <div>
+        <ImageList
+          images={images}
+          badSearch={badSearch}
+          className="ImageList"
+        />
       </div>
     </div>
   );
