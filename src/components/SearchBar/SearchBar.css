@@ -87,22 +87,27 @@
 }
 
 @media (min-width: 851px){
+  
   .inputPhoto{
     margin-top: 15rem;
   }
+  
   .buttonItem{
     margin-top: auto;
   }
+  
   .seeMore{
     font-size: 48px;
   }
+  
 }
 
 @media (max-width: 851px) {
-
+  
   .galleryExplanation {
     display: none;
   }
+  
 }
 
 @media (max-width: 750px) {
