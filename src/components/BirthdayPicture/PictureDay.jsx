@@ -21,11 +21,11 @@ class PictureDay extends React.Component {
 
   componentDidMount() {
     this.getPicture();
-    Aos.init({ duration: 1200 });
+    Aos.init({ duration: 1800 });
   }
 
   componentDidUpdate(prevProps, prevState) {
-    Aos.init({ duration: 1200 });
+    Aos.init({ duration: 1800 });
     const { dateComp, chosenName } = this.state;
     if (prevState.dateComp !== dateComp) {
       this.getPicture();
@@ -113,9 +113,9 @@ class PictureDay extends React.Component {
               }}
             >
               <label className="favLabel" htmlFor="chosenName">
-                <input className="favInput" type="text" id="chosenName" name="chosenName" />
+                <input data-aos="fade-right" className="favInput" type="text" id="chosenName" name="chosenName" />
               </label>
-              <button className="favButton" type="submit">
+              <button data-aos="fade-left" className="favButton" type="submit">
                 Ajouter
               </button>
             </form>
