@@ -1,11 +1,8 @@
 import React from 'react';
-import Aos from 'aos';
 import Button from './Button';
 import TextInput from './TextInput';
 import './SearchBar.css';
-import 'aos/dist/aos.css';
 
-Aos.init({ duration: 1800 });
 
 const SearchBar = ({
   keywords, onSearch, setKeywords
