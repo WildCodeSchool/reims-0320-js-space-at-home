@@ -130,8 +130,8 @@
     }
 
     .eventImage{
-        height: 100vh;
-        width: auto;
+        height: 100%;
+        width: 100%;
     }
 
     .eventBlock iframe{
@@ -140,6 +140,7 @@
 
     .eventText{
         font-size: 1.5rem;
+        padding: 0.5em;
     }
 
 }

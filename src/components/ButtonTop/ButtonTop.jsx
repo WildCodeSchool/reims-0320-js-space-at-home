@@ -2,7 +2,7 @@ import React from 'react';
 import BackToTop from 'react-back-to-top-button';
 import './ButtonTop.css';
 
-function App() {
+function ButtonTop() {
   return (
     <BackToTop
       showOnScroll
@@ -15,4 +15,4 @@ function App() {
   );
 }
 
-export default App;
+export default ButtonTop;
