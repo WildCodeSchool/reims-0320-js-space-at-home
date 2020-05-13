@@ -101,8 +101,8 @@ class PictureDay extends React.Component {
           <h1 className="eventTitle">Picture at your birthday :</h1>
           <div className="eventBlock">
             {url.includes('youtube')
-              ? <iframe className="eventIframe" src={url} title="youtubeVideo" allowFullScreen />
-              : <div><img className="eventImage" src={url} alt="pictureDay" /></div>}
+              ? <iframe data-aos="zoom-in" className="eventIframe" src={url} title="youtubeVideo" allowFullScreen />
+              : <div><img data-aos="zoom-in" className="eventImage" src={url} alt="pictureDay" /></div>}
             <p data-aos="fade-up" className="eventText">{concept}</p>
             <form
               className="favForm"
