@@ -14,10 +14,50 @@
   margin-top: 15rem;
 }
 
-.FavRoute{
+.FavRouteDiv{
   text-align: center;
   margin-bottom: 2rem;
 }
+
+.FavRoute{
+  text-decoration: none;
+  font-size: 1.2rem;
+  background-color: rgb(240, 240, 240);
+  color: rgb(42, 42, 42);
+  padding: 0.4rem;
+  border-radius: 11px;
+  border: 2px solid;
+  border-color: rgb(109, 143, 238);
+}
+
+.FavRoute:hover{
+  color: grey;
+  text-decoration: none;
+  background-color: black;
+}
+
+.backRouteDiv{
+  margin-bottom: 2rem;
+}
+
+.backRoute{
+  text-decoration: none;
+  font-size: 1.2rem;
+  background-color: rgb(240, 240, 240);
+  color: rgb(42, 42, 42);
+  padding: 0.4rem;
+  border-radius: 11px;
+  border: 2px solid;
+  border-color: rgb(109, 143, 238);
+}
+
+.backRoute:hover{
+  color: grey;
+  text-decoration: none;
+  background-color: black;
+}
+
+
 @media screen and (max-width: 851px){
 
   .firstTitle{

@@ -49,7 +49,7 @@ class SendBP extends React.Component {
               )}
             </select>
           </label>
-          <button type="submit">Copy Urls</button>
+          <button type="submit" className="copyButton">Copy Urls</button>
           <input className="noneInput" type="text" value={urlSelect} id="copyInput" readOnly="true" />
         </form>
       </div>
