@@ -121,7 +121,7 @@ class PictureDay extends React.Component {
                         <input data-aos="fade-right" className="favInput" type="text" id="chosenName" name="chosenName" />
                       </label>
                       <button data-aos="fade-left" className="favButton" type="submit">
-                        Ajouter
+                        Add to favorite
                       </button>
                     </form>
                   </div>
@@ -172,7 +172,7 @@ class PictureDay extends React.Component {
                         <input className="favInput" type="text" id="chosenName" name="chosenName" />
                       </label>
                       <button className="favButton" type="submit">
-                        Ajouter
+                        Add to favorite
                       </button>
                     </form>
                   </div>
