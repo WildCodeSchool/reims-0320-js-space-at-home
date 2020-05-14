@@ -179,6 +179,12 @@
     .eventIframe{
         min-height: 40vh;
     }
+
+    .eventButton {
+        width: 14rem;
+        height: 3rem;
+        font-size: 1rem;
+    }
 }
 @media screen  and (max-width: 851px){
     .favForm{
@@ -186,12 +192,6 @@
     }
     .favInput{
         width: 12rem;
-    }
-
-    .eventButton {
-        width: 14rem;
-        height: 3rem;
-        font-size: 1rem;
     }
 
 }
