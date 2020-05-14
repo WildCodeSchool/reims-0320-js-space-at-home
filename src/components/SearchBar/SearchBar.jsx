@@ -9,7 +9,7 @@ const SearchBar = ({
 }) => (
   <>
     <div className="galleryExplanation">
-      <p>In this section you are able to find some pictures with a keyword about space (ex: earth, apollo...)</p>
+      <p>In this section you are able to find some pictures with a keyword about space.</p>
     </div>
     <div className="SearchBar">
       <TextInput setText={setKeywords} text={keywords} />
