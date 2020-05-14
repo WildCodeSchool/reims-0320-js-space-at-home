@@ -80,6 +80,11 @@ function App() {
                   </Route>
                   <Route exact path="/">
                     <PictureDay addToFavorite={addFavorite} />
+                    <div className="FavRouteDiv">
+                      <Link to="/PictureFavorite" className="FavRoute">
+                        Go to my favorite gallery
+                      </Link>
+                    </div>
                   </Route>
                 </Switch>
               </Router>
