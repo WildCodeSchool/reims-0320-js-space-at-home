@@ -66,4 +66,9 @@
     display: none;
   }
 
+  .FavRouteDiv {
+    text-align: center;
+    margin-left: 2rem;
+  }
+
 }
