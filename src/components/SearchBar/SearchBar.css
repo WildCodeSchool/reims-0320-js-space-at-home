@@ -42,17 +42,22 @@
   margin-bottom: 10rem;
 
 }
+
 .ButtonIcon{
   max-height: 2.5rem;
 }
+
+
+
 .buttonItem{
   margin-left: 1rem;
   border-radius: 50%;
   border-color: rgb(109, 143, 238) ;
   background-color: rgb(255, 255, 255);
 }
+
 .buttonItem:hover{
-  background-color: rgb(160, 193, 204);
+  background-color: rgb(42, 42, 42);
 
 }
 
@@ -83,7 +88,8 @@
 
 .imageListError{
   text-align: center;
-  font-size: 2rem;
+  font-size: 2.5rem;
+  font-family: 'Suravaram', 'serif';
 }
 
 @media (min-width: 851px){
