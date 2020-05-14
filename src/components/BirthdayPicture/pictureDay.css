@@ -179,4 +179,10 @@
         min-height: 40vh;
     }
 
+    .eventButton {
+        width: 14rem;
+        height: 3rem;
+        font-size: 1rem;
+    }
+
 }
