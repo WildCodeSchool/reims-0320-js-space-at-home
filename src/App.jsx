@@ -30,10 +30,11 @@ function App() {
       setFavorites([...favorites, favorite]);
       Swal.fire({
         title: 'Nice!',
-        text: `"${favorite.chosenName}" has been added to your gallery`,
+        text: `"${favorite.chosenName}" added to your gallery`,
         icon: 'success',
         showConfirmButton: false,
-        timer: 2500,
+        background: 'black',
+        timer: 2100,
       });
     }
   };
