@@ -19,14 +19,23 @@ import Titre from './components/Titre';
 import SearchBar from './components/SearchBar/SearchBar';
 import Contact from './components/Contact/Contact';
 import PictureFavorite from './components/BirthdayPicture/PictureFavorite';
-
+import Swal from 'sweetalert2';
 
 function App() {
   const [favorites, setFavorites] = useState([]);
+  const Swal = require('sweetalert2')
   const addFavorite = (favorite) => {
     const transition = favorites.map((favo) => favo.url);
     if (transition.indexOf(favorite.url) === -1) {
       setFavorites([...favorites, favorite]);
+      Swal.fire({
+        title: 'Nice!',
+        text: `"${favorite.chosenName}" added to your gallery`,
+        icon: 'success',
+        showConfirmButton: false,
+        background: 'black',
+        timer: 2100,
+      });
     }
   };
   return (
