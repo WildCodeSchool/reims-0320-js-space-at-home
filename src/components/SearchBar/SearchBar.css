@@ -36,6 +36,7 @@
   display: flex;
   justify-content: center;
   margin-bottom: 4rem;
+  margin-top: 3rem;
 }
 
 .SearchBarComponent{
@@ -92,6 +93,16 @@
   font-family: 'Suravaram', 'serif';
 }
 
+.galleryExplanation {
+  text-align: center;
+}
+@media (min-width: 812px){
+
+  .galleryExplanation{
+    font-size: 150%;
+  }
+}
+
 @media (min-width: 851px){
 
   .buttonItem{
@@ -107,7 +118,7 @@
     font-family: 'Suravaram', serif;
     font-size: 1.8rem;
     text-align: center; 
-    margin-top: 6rem;
+    margin-top: 10rem;
   }
 }
 
