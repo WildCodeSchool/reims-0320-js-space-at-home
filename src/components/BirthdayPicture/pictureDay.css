@@ -44,16 +44,15 @@
 }
 
 .eventButton{
-    width: 15rem;
-    height: 3rem;
+    width: 10.5rem;
+    height: 2.5rem;
     margin-bottom: 1rem;
     background:rgb(80, 80, 80);
     color:rgb(231, 227, 227);
     border: 1px solid rgb(109, 143, 238);
     border-radius: 10%;
     position:relative;
-    font-size:1.2rem;
-    padding:0 3em;
+    font-size: 0.9rem;
     cursor:pointer;
     transition:1000ms ease all;
     outline:none;
@@ -62,7 +61,9 @@
 .eventButton:hover{
     background:rgb(185, 185, 185);
     color: rgb(2, 2, 2);
+    cursor: pointer;
 }
+
 .eventButton:before,.eventButton:after{
     content:'';
     position:absolute;
@@ -144,6 +145,15 @@
     .eventPage {
         margin-top: 0;
     }
+
+    .eventButton:before,.eventButton:after{ 
+        display: none;
+    }
+
+    .eventButton:hover{
+        display: none;
+    }
+    
 }
 
 @media screen and (min-width: 851px){
@@ -176,6 +186,12 @@
     }
     .favInput{
         width: 12rem;
+    }
+
+    .eventButton {
+        width: 14rem;
+        height: 3rem;
+        font-size: 1rem;
     }
 
 }

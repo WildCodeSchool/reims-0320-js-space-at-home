@@ -6,6 +6,7 @@ const TextInput = ({ setText, text }) => (
     onChange={(event) => setText(event.target.value)}
     type="text"
     value={text}
+    placeholder="ex: earth, apollo.."
   />
 );
 

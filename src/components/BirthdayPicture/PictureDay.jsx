@@ -118,7 +118,7 @@ class PictureDay extends React.Component {
                       }}
                     >
                       <label className="favLabel" htmlFor="chosenName">
-                        <input data-aos="fade-right" className="favInput" type="text" id="chosenName" name="chosenName" />
+                        <input data-aos="fade-right" className="favInput" type="text" id="chosenName" name="chosenName" placeholder="Enter your name" />
                       </label>
                       <button data-aos="fade-left" className="favButton" type="submit">
                         Add to favorite
@@ -169,7 +169,7 @@ class PictureDay extends React.Component {
                       }}
                     >
                       <label className="favLabel" htmlFor="chosenName">
-                        <input className="favInput" type="text" id="chosenName" name="chosenName" />
+                        <input className="favInput" type="text" id="chosenName" name="chosenName" placeholder="Enter your name"  />
                       </label>
                       <button className="favButton" type="submit">
                         Add to favorite
