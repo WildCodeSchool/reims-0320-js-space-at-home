@@ -12,11 +12,13 @@
   font-family: 'Audiowide';
   font-size: 7rem;
   margin-top: 15rem;
+  margin-bottom: 9rem;
 }
 
 .FavRouteDiv{
-  text-align: center;
+  text-align: right;
   margin-bottom: 2rem;
+  margin-right: 1rem;
 }
 
 .FavRoute{
