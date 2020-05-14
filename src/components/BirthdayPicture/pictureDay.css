@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron&display=swap");
 
 .eventPage{
-    margin-top: 10rem;
+    margin-top: 5rem;
 }
 
 .eventImage{
@@ -140,6 +140,9 @@
         padding: 0.5em;
     }
 
+    .eventPage {
+        margin-top: 0;
+    }
 }
 
 @media screen and (min-width: 851px){
