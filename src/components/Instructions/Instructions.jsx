@@ -5,18 +5,21 @@ function Instructions() {
   return (
     <div className="instructionsBlock">
       <p className="instructionsText">
-        Welcome to Born In Space, in this Web-App you will be able to have
-        a look at the picture of the day from the NASA.
-        Otherwise, by typing your birth date on the search bar you
-        should be able to see what the picture of the day was when you were born.
-        Unfortunately, it will only works if you are born after the 16 June 1995,
-        including this date.
-        But nothing stop you from trying your friends date !
-        You can also add photos of the dates that have marked your life! Marriage, births..
-        for example and consult them on your personal gallery.
-        The image link, if you find it useful, is in your gallery.
-        You will also have a section to type a keyword that will return
-        you an image collection so you can found your favorite planet !
+        Welcome to Born in Space!
+        In this wep-app, you will be able to have a look at
+        the picture of the day chosen by the NASA.
+        You can also enter your birthdate in the search bar to discover
+        what was the “picture of the day” on
+        the day you were born.
+        Unfortunately, this feature will only work if you are born after June 16th,
+        1995, this date included.
+        But nothing prevents you from trying it out with your friends’ birthdates!
+        You can also use your personal gallery
+        to save pictures from the dates that have marked your life,
+        such as marriages, births… and directly access these images links.
+        On this site, you will also find a section where to type a keyword
+        that will you return you a collection of images, to let you find your favourite planet,
+        for example!
       </p>
     </div>
   );
