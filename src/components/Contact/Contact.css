@@ -2,9 +2,31 @@
     color: white;
 }
 
+.createdContact h3{
+    margin-bottom: 1rem;
+}
+
 .createdContact {
     padding: 1em;
     display: flex;
     flex-direction: column;
     line-height: 2em;
+}
+
+.createdContact a{
+    text-decoration: none;
+    text-align:center;
+    font-size: 2rem;
+    margin-bottom: 4rem;
+    color:rgb(42, 42, 42);
+    border-radius: 11px;
+    border: 2px solid;
+    border-color: rgb(109, 143, 238);
+    background-color: rgb(240, 240, 240);
+}
+
+.createdContact a:hover{
+    text-decoration: none;
+    color:rgb(42, 42, 42);
+    background-color: black;
 }

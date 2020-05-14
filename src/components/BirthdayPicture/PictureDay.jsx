@@ -74,7 +74,7 @@ class PictureDay extends React.Component {
     return (
       <div className="eventPage">
         <div className="eventSelectorBlock">
-          <label htmlFor="date" className="eventLabelSelector">
+          <label htmlFor="date" className="eventLabelSelector" id="eventSelect">
             Select your Birthday :
             <input
               type="date"

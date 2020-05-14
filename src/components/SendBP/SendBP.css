@@ -4,3 +4,25 @@
     background-color: black;
     color: black;
 }
+
+.copyButton{
+    text-decoration: none;
+    color:rgb(42, 42, 42);
+    border-radius: 11px;
+    border: 2px solid;
+    border-color: rgb(109, 143, 238);
+    background-color: rgb(240, 240, 240);
+}
+
+.copyButton:hover{
+    background-color: black;
+}
+
+.sbpSelect{
+    color:rgb(240, 240, 240);
+    border-radius: 11px;
+    border: 2px solid;
+    border-color: rgb(109, 143, 238);
+    background-color: rgb(34, 31, 31);
+    margin-right: 0.7rem;
+}

@@ -41,16 +41,20 @@ function App() {
                   <Route exact path="/">
                     <Instructions />
                     <PictureDay addToFavorite={addFavorite} />
-                    <Link to="/PictureFavorite">
-                      <p className="FavRoute">Favorite gallery</p>
-                    </Link>
+                    <div className="FavRouteDiv">
+                      <Link to="/PictureFavorite" className="FavRoute">
+                        Go to my favorite gallery
+                      </Link>
+                    </div>
                     <SearchImages />
                   </Route>
                   <Route path="/PictureFavorite">
+                    <div className="backRouteDiv">
+                      <Link to="/" className="backRoute">
+                        Back
+                      </Link>
+                    </div>
                     <PictureFavorite favorites={favorites} />
-                    <Link to="/">
-                      Back
-                    </Link>
                   </Route>
                 </Switch>
               </Router>
@@ -76,9 +80,6 @@ function App() {
                   </Route>
                   <Route exact path="/">
                     <PictureDay addToFavorite={addFavorite} />
-                    <Link to="/PictureFavorite">
-                      <p className="FavRoute">Favorite gallery</p>
-                    </Link>
                   </Route>
                 </Switch>
               </Router>
