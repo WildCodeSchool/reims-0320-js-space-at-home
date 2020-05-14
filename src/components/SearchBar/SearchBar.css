@@ -36,23 +36,29 @@
   display: flex;
   justify-content: center;
   margin-bottom: 4rem;
+  margin-top: 3rem;
 }
 
 .SearchBarComponent{
   margin-bottom: 10rem;
 
 }
+
 .ButtonIcon{
   max-height: 2.5rem;
 }
+
+
+
 .buttonItem{
   margin-left: 1rem;
   border-radius: 50%;
   border-color: rgb(109, 143, 238) ;
   background-color: rgb(255, 255, 255);
 }
+
 .buttonItem:hover{
-  background-color: rgb(160, 193, 204);
+  background-color: rgb(42, 42, 42);
 
 }
 
@@ -83,7 +89,18 @@
 
 .imageListError{
   text-align: center;
-  font-size: 2rem;
+  font-size: 2.5rem;
+  font-family: 'Suravaram', 'serif';
+}
+
+.galleryExplanation {
+  text-align: center;
+}
+@media (min-width: 812px){
+
+  .galleryExplanation{
+    font-size: 150%;
+  }
 }
 
 @media (min-width: 851px){
@@ -101,7 +118,7 @@
     font-family: 'Suravaram', serif;
     font-size: 1.8rem;
     text-align: center; 
-    margin-top: 6rem;
+    margin-top: 10rem;
   }
 }
 

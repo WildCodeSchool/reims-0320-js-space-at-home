@@ -93,22 +93,23 @@
     letter-spacing: 0.5px;
     line-height: 1.1;
     font-size: 1.5rem;
+    margin-bottom: 5rem;
 }
 
 .favForm{
     display: flex;
     justify-content: center;
-    margin-bottom: 1rem;
 }
 
 .favInput{
-    max-width: 20rem;
+    width: 22rem;
+    height: 2.5rem;
     background-color:  rgb(34,31, 31);
     border-radius: 15px;
     text-align: center;
     color: white;
     margin-right: 1rem;
-    border-color: rgb(109, 143, 238);;
+    border-color: rgb(109, 143, 238);
 }
 
 .favButton{
@@ -177,6 +178,14 @@
 
     .eventIframe{
         min-height: 40vh;
+    }
+}
+@media screen  and (max-width: 851px){
+    .favForm{
+        margin-bottom: 7rem;
+    }
+    .favInput{
+        width: 12rem;
     }
 
     .eventButton {
