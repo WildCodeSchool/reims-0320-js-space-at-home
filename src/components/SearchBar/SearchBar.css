@@ -96,14 +96,13 @@
     font-size: 48px;
   }
   
-}
-
-@media (max-width: 851px) {
-  
   .galleryExplanation {
-    display: none;
+    display: block;
+    font-family: 'Suravaram', serif;
+    font-size: 1.8rem;
+    text-align: center; 
+    margin-top: 6rem;
   }
-  
 }
 
 @media (max-width: 750px) {
