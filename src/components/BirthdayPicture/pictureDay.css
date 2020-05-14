@@ -145,14 +145,6 @@
     .eventPage {
         margin-top: 0;
     }
-
-    .eventButton:before,.eventButton:after{ 
-        display: none;
-    }
-
-    .eventButton:hover{
-        display: none;
-    }
     
 }
 
@@ -187,11 +179,20 @@
     }
 }
 @media screen  and (max-width: 851px){
+    
     .favForm{
         margin-bottom: 7rem;
     }
     .favInput{
         width: 12rem;
+    }
+
+    .eventButton:before,.eventButton:after{ 
+        display: none;
+    }
+
+    .eventButton:hover{
+        display: none;
     }
 
 }
