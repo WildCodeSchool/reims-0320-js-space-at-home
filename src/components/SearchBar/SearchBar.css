@@ -86,6 +86,16 @@
   font-size: 2rem;
 }
 
+.galleryExplanation {
+  text-align: center;
+}
+@media (min-width: 812px){
+
+  .galleryExplanation{
+    font-size: 150%;
+  }
+}
+
 @media (min-width: 851px){
 
   .buttonItem{
@@ -94,14 +104,6 @@
   
   .seeMore{
     font-size: 48px;
-  }
-  
-}
-
-@media (max-width: 851px) {
-  
-  .galleryExplanation {
-    display: none;
   }
   
 }
