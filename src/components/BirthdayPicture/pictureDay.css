@@ -119,7 +119,7 @@
 .seeMore{
     text-align: center;
 }
-@media screen and  (max-height: 750px){
+@media screen and  (max-height: 850px){
 
     .eventBlock{
         display: flex;
