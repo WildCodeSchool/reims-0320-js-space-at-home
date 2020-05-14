@@ -5,7 +5,10 @@ import SendBP from '../SendBP/SendBP';
 const PictureFavorite = ({ favorites }) => (
   <>
     <div className="pictureFavoriteText">
-      <p>In this section you can see all the pictures you added as your favorite and copy the link of each picture.</p>
+      <p>
+        In this section you can see all the pictures
+        you added as your favorite and copy the link of each picture.
+      </p>
     </div>
     <div className="galleryBlock">
       {favorites.map((favorite) => {

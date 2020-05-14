@@ -2,8 +2,6 @@
     color: white;
     padding: 1rem;
     text-align: justify;
-    /*background-color: #000124;*/
-    margin-top: 10rem;
 }
 
 .instructionsText{
@@ -13,7 +11,17 @@
 }
 
 @media screen and (max-width: 812px) {
+
   .instructionsText {
     font-size: 1.5rem;
   }
+  
+}
+
+@media screen and (max-width: 400px){
+
+  .instructionsText{
+    margin-top: 2rem;
+  }
+
 }
